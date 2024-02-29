@@ -1,0 +1,12 @@
+--Slowly changing dimension de Jurisdicciones que van desapereciendo y creandose.
+-- Latitud y longitud --- GeoGIS mapas en el tiempo.-
+-- ETL para excel del INDEC , para unificar y fixear.-
+Diseño documentado-- Graficos Esquema.
+-- No sólo enfocar en la Matanza, sino
+- Edad , sexo, nivel de educación 
+-- Documentar en LOG todo,
+Celeste  Aprobado
+Amarillo- Corriger o ampliar
+Blanco-- nuevo Contenido
+
+ 
