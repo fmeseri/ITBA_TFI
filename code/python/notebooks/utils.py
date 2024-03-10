@@ -116,11 +116,22 @@ def dataframe_to_latex(df, filename='output.tex'):
         # f.write(header + "\n")
         # f.write("\\hline\n")
         
-        # Write header row with bold text, background color, and white text color
-        header = " & ".join("\\textbf{\\cellcolor[rgb]{0,0.231,0.427}\\textcolor{white}{" + str(col) + "}}" for col in df.columns) + " \\\\"
-        f.write(header + "\n")
-        f.write("\\hline\n")
+        # # Write header row with bold text, background color, and white text color
+        # header = " & ".join("\\textbf{\\cellcolor[rgb]{0,0.231,0.427}\\textcolor{white}{" + str(col) + "}}"
+        #  for col in df.columns) + " \\\\"
+        # f.write(header + "\n")
+        # f.write("\\hline\n")
 
+
+    # Write header row with bold text, background color, and white text color
+        for idx, col in enumerate(df.columns):
+            if "_" in col:
+             col = "$" + col + "$"
+            col = "\\textbf{\\cellcolor[rgb]{0,0.231,0.427}\\textcolor{white}{" + col + "}}"
+            f.write(col)
+            if idx < len(df.columns) - 1:
+             f.write(" & ")
+        f.write(" \\\\ \\hline\n")
 
         # Write data rows
         for row in df.values:

@@ -215,6 +215,9 @@ B es la cantidad de nacidos vivos;\newline
 b es la tasa bruta de natalidad;\newline
 D es la cantidad de defunciones;\newline
 d es la tasa bruta de mortalidad.\newline
+
+ ---------------------------EN DESARROLLO------------------------4
+ \newline
 % El método de correlación de razones se aplica asumiendo que la evolución de la población
 % está correlacionada con la variación de una o más variables sintomáticas. La correlación se estima
 % por medio de un modelo de regresión, en tanto que la variación se establece por la razón entre los
@@ -384,7 +387,8 @@ Como herramientas se contemplan los lenguajes Python y SQL. Los datos se trabaja
  corresponden al año 1991 fueron reprocesados según la división político - administrativa
  vigente al año 2001." [8] INDEC, 2001
  
- En el cuadro \ref{tab:DimDepto} puede verse la dimensión departamento con los campos agregados y los comentarios correspondientes en cada caso.
+ En el cuadro \ref{tab:DimDepto} puede verse la dimensión departamento con los campos agregados y
+  los comentarios correspondientes en cada caso.
  
 
 
@@ -475,21 +479,22 @@ para luego producir la ingesta ,transformar en caso de que sea necesario, de los
     \centering
     \includegraphics[width=0.8\textwidth]{img/DER.jpg}
     \caption{Diagrama de Entidad Relación}
-    \label{fig:DER}
+  \label{fig:DER}
 \end{figure}
 
 
 \section{Metodologías Aplicadas}
 
-
+..---- TODAVIA SIN DESARROLLO.---------------
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{ Análisis exploratorio de datos}
 \subsection{Población}
+
 Con sustento en la base de datos "AMBA" ( POSTGRES/POSTGIS) se analizarán los distintos datos recopilados según nivel de agregación.
 En primera instancia se  generó un dataset con todos los departamentos del AMBA, sus caracteristicas georgráficas así como los valores
-de las variables correspondientes a los censos 1991-2001-2010-2022. 
+de las variables correspondientes a los censos 1991-2001-2010-2022.\ref{fig:lineasPob}
  
 En el cuadro \ref{tab:censos_amba} se puede observar el esquema del dataset .
 \begin{table}[htb]
@@ -526,10 +531,12 @@ En el cuadro \ref{tab:censos_amba} se puede observar el esquema del dataset .
   \end{table}
   
   Se observa en el cuadro \ref{tab:summaryCensos} que existen valores nulos para el valor poblaciones, que se corresponden,
-   con los casos de municipios de desaparecen en la reorganización administrativa desde 1991 a 2001. Se destaca también que 
-   para el censo 1991 no se detalla el total de viviendas particules y colectivas .
+   con los casos de municipios de desaparecen en la reorganización administrativa desde 1991 a 2001.\newline
+    A saber : Esteban Echeverría' ,'Ezeiza', 'Florencio Varela' ,'Hurlingham' 'Ituzaingó'
+    'José C. Paz', 'Malvinas Argentinas', 'Morón' ,'San Miguel' y     'General Sarmiento'.
+   \newline Se destaca también que    para el censo 1991 no se detalla el total de viviendas particules y colectivas .
 
-  \begin{table}[htbp]
+\begin{table}[htbp]
     \centering
     \caption{Summary de columnas de Censos AMBA}
     \label{tab:summaryCensos}
@@ -551,117 +558,265 @@ En el cuadro \ref{tab:censos_amba} se puede observar el esquema del dataset .
         \bottomrule
     \end{tabular}
 \end{table}
-  
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png}}
+  \caption{Población por departamento 1991-2022}
+  \label{fig:lineasPob}
+\end{figure}
+
+Asismismo se analiza la evolución de la densisdad de población [hab/\textup{km\textsuperscript{2}}], la misma puede obsersevarse
+en la figura \ref{fig:lineasDensAll}. Las mismas consideraciones aplican en el caso de densidad respecto a los departamentos que sufren
+modificaciones administrativas entre 1991  y 2001, donde los valores de densidad se ven fuertemente afectados y no pueden asociarse
+al fenómeno poblacional.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/Dens199122All.png}}
+  \caption{Densidad de Población por departamento 1991-2022}
+  \label{fig:lineasDensAll}
+\end{figure}
 
 
 \subsubsection{Población y densidad en vista geográfica}
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.45\textwidth]{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg}
-%     \caption{Diagrama de Entidad Relación}
-%     \label{fig:pob1991}
- 
-% \end{figure}
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg}}
-%     \caption{Diagrama de Entidad Relación}
-%     \label{fig:pob2001}
- 
-% \end{figure}
-% \hline
-% \begin{figure}[htbp]
-%   \centering
-%   \includegraphics[width=0.45\textwidth]{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg}
-%   \caption{Diagrama de Entidad Relación}
-%   \label{fig:pob2010}
-
-% \end{figure}
-
-% \begin{figure}[htbp]
-%   \centering
-%   \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg}}
-%   \caption{Diagrama de Entidad Relación}
-%   \label{fig:pob2022}
-
-% \end{figure}
-
+En este caso se busca una visualización geográfica del dataset. Utilizando el sofware QGIS conectado directamente a la base de 
+datos AMBA (POSTGRES) se pudo disponer la información de cada Departamento con su geolocalización.
+ Se detalla en la figura \ref{fig:AllPob} la poblacion total para cada departamento ( Censos 1991 -2022).Se observa claramente que el distrito más poblado 
+ es La Matanza. Debido su extensión no es el departamento con mayor densidad poblacional en [hab/\textup{km\textsuperscript{2}}] figura \ref{fig:DensidadAll} ,
+ los distritos más densamente poblados son Lanús y Vicente López. 
+%%% QGIS GRAPHICS
 \begin{landscape}
 \begin{figure}[p] % Use 'p' to force the figures to be placed on a separate page
   \centering
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
       \centering
       \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg}}
       \caption{AMBA- Población total Censo 1991}
       \label{fig:pob1991}
   \end{subfigure}
   \quad % Add some horizontal space between subfigures
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
       \centering
       \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg}}
       \caption{AMBA- Población total Censo  2001}
       \label{fig:pob2001}
   \end{subfigure}
   
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
       \centering
       \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg}}
       \caption{AMBA- Población total Censo 2010}
       \label{fig:pob2010}
   \end{subfigure}
   \quad % Add some horizontal space between subfigures
-  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}[b]{0.48\textwidth}
       \centering
       \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg}}
       \caption{AMBA- Población total Censo 2022}
-      \label{fig:pob2022}
+  \label{fig:pob2022}
   \end{subfigure}
-  \caption{Población Total Censos 1991-2022}
-  \label{fig:subfigures}
+  \caption{Población Total Censos 1991 2022}
+\label{fig:AllPob}
 \end{figure}
-
 \end{landscape}
 
-ahora densidad!!!
 
 \begin{landscape}
   \begin{figure}[p] % Use 'p' to force the figures to be placed on a separate page
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/dens1991.jpg}}
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg}}
         \caption{AMBA- Población total Censo 1991}
-        \label{fig:dens1991}
+    \label{fig:dens1991}
     \end{subfigure}
     \quad % Add some horizontal space between subfigures
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/dens2001.jpg}}
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg}}
         \caption{AMBA- Densidad [hab/km2] Censo  2001}
-        \label{fig:dens2001}
+      \label{fig:dens2001}
     \end{subfigure}
     
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/dens2010.jpg}}
-        \caption{AMBA- Población total Censo 2010}
-        \label{fig:dens2010}
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg}}
+        \caption{AMBA- Densidad [hab/km2] Censo 2010}
+      \label{fig:dens2010}
     \end{subfigure}
     \quad % Add some horizontal space between subfigures
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/dens2022.jpg}}
-        \caption{AMBA- Población total Censo 2022}
-        \label{fig:dens2022}
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg}}
+        \caption{AMBA- Densidad [hab/km2] Censo 2022}
+      \label{fig:dens2022}
     \end{subfigure}
-    \caption{Población Total Censos 1991-2022}
-    \label{fig:subfigures}
+    \caption{AMBA- Densidad [hab/km2] Censos 1991 2022}
+  \label{fig:DensidadAll}
   \end{figure}
   
   \end{landscape}
 
-%  %%%%%%%%%%%%%%%%%%%%%%% 
+
+
+  \subsubsection{Población - Ratios de crecimento}
+  En este caso se determinaron los ratios de crecimento entre censos consecutivos para cada departamento.
+  Para este análisis se trata de manera difrenciada aquellos municipios que han sufrido modificaciones administrativas
+  desde 1991  a 2001, donde se  que al  desmembrarse en varios partidos, resignando superficie, algunas tasas o ratios de crecimiento 
+  se muestran negativos. Asimismo partidos que ha visto incrementada su superfice presentan  tasas de crecimiento no representativas del 
+  fenómeno demográfico.\newline
+  Por otra parte partidos que desaparecen o se crean en el año  2001 no se consideran el valor del ratio para el intervalo 1991-2001.\newline
+  
+  En el cuadro \ref{tab:RatiosAll} se puede observar los valores obtenidos. Para el año en cuestion la tasa surge de dividir el valor poblacional
+  del censo de este año sobre el valor poblacional del censo anterior,expresado en porcentaje.\newline
+  Es decir: \newline
+  \begin{equation}
+    \underset{\text{\footnotesize(Año $X$)}}{\text{Growth Ratio}} = 
+    \left( \frac{\underset{\text{\footnotesize(Censo $X$)}}{\text{Población}}}{\underset{\text{\footnotesize(Censo $X-1$)}}{\text{Población}}} - 1 \right) \times 100
+  \end{equation}
+  \newline
+
+  \begin{table}[htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{nam}} &
+     \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{anio}}
+      & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{pob}}
+       & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$growth_ratio$}} \\ \hline
+    Almirante Brown & 2001 & 515556.0 & 14.39 \\
+    Almirante Brown & 2022 & 585852.0 & 5.96 \\
+    Almirante Brown & 2010 & 552902.0 & 7.24 \\
+    Avellaneda & 2001 & 328980.0 & -4.64 \\
+    Avellaneda & 2010 & 342677.0 & 4.16 \\
+    Avellaneda & 2022 & 370939.0 & 8.25 \\
+    Berazategui & 2022 & 360582.0 & 11.21 \\
+    Berazategui & 2001 & 287913.0 & 17.55 \\
+    Berazategui & 2010 & 324244.0 & 12.62 \\
+    Esteban Echeverría & 2001 & 243974.0 & -11.54 \\
+    Esteban Echeverría & 2010 & 300959.0 & 23.36 \\
+    Esteban Echeverría & 2022 & 339030.0 & 12.65 \\
+    Ezeiza & 2022 & 203283.0 & 24.16 \\
+    Ezeiza & 2010 & 163722.0 & 37.81 \\
+    ....& & & \\
+  
+    \hline
+    \end{tabular}
+    \caption{Extracto. Tasa de crecimiento Intercensal}
+  \label{tab:RatiosAll}
+    \end{table}
+  
+
+  A partir de  análisis estadísitico simple sobre estas tasas se observa una gran disparidad en los valores, siendo que se trata de un sector
+  geográfico de similares características demográficas. Cuadro \ref{tab:summary_growth_ratio}
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lr}
+        \hline
+        \textbf{Estadístico} & \textbf{Valor} \\
+        \hline
+        Count & 66.000000 \\
+        Mean & 9.286961 \\
+        Standard Deviation & 13.111467 \\
+        Minimum & -51.926259 \\
+        25\% Percentile & 3.033150 \\
+        50\% Percentile & 8.129835 \\
+        75\% Percentile & 16.476163 \\
+        Maximum & 41.466819 \\
+        \hline
+    \end{tabular}
+    \caption{Summary Statistics for Growth Ratio}
+    \label{tab:summary_growth_ratio}
+\end{table}
+\newline
+A partir de la elaboración de un gráfico boxplot se determinaron los \textbf{Outliers} para estas tasas de crecimiento.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png}}
+  \caption{Box plot Tasas de crecmiento intercensa 1991-2022}
+  \label{fig:boxplotRatios}
+\end{figure}
+ En este caso en el cuadro \ref{fig:boxplotRatios} se observan 4 outliers , tanto en valores positivos como negativos. Como se comentó anteriormente no se analizarán
+ los casos con modificaciones admitrativas desde 1991 a 2001.Cuadro \ref{tab:DimDepto} .Se desestima el caso de Morón para el período 1991-2001 donde la tasa 
+ es negativa de 51.9, debido a la cesión de tierras para la creación de distintos partidos.\newline
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|c|c|c|c|r|r|}
+      \hline
+      \textbf{id} & \textbf{nam} & \textbf{codDepto} & \textbf{anio} & \textbf{pob} & \textbf{growthRatio} \\
+      \hline
+      54 & Morón & 06568 & 2001 & 309380.0 & -51.92 \\
+      78 & Florencio Varela & 06274 & 2001 & 348970.0 & 36.85 \\
+      13 & La Matanza & 06427 & 2010 & 1775816.0 & 41.47\\
+      29 & Ezeiza & 06270 & 2010 & 163722.0 & 37.80 \\
+      \hline
+  \end{tabular}
+  \caption{Outliers para Tasas de crecmiento intercensal}
+\label{tab:RatiosOutliers}
+\end{table}
+
+Se  grafica a continación (Figura \ref{fig:OutlierlineasPob}) la curva población de los 3 outiliers destacados :Florencio Varela ,La Matanza y Ezeiza.
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png}}
+  \caption{Curvas de Población por departamento 1991-2022}
+    \label{fig:OutlierlineasPob}
+\end{figure}
+
+
+\subsubsection{ Tasas de crecimento intercensal. coeficiente de Variación}
+ Con el objetivo de profundizar el análsis de las tasas de crecimiento
+ se procedió a calcular luego la desviación estandar y el coeficiente de variación por Departamento.\newline
+En primera instancia se agrupa por departamento para determinar la media y la desviación estándar de cada subset de datos.
+Se define  el coeficiente de variación (CV) como:
+
+\begin{equation}
+  \underset{\text{\footnotesize(Departametno)}}{\text{CV}} = 
+  \left( \frac{\underset{\text{\footnotesize(Departamento)}}{\text{Std.Dev}}}{\underset{\text{\footnotesize(Departamento)}}{\text{Mean}}} \right) \times 100
+\end{equation}
+
+El coeficiente de variación es una medidad de la dispersión alrededor de la media de la población. En este caso sería curvas poblacionales
+con gran dispersión en su tasas de crecimento para los censos del periodo analizado año 1991 -2022.-
+\newline
+En la figura \ref{fig:CVOutliersPoblacion} se observa el resultado .Se destaca en particular los valores extremos
+tanto negativos como positivos.A saber : Vincente López, Morón, Tres de Febrero, Avellaneda ,La Matanza ,
+Esteban Echeverría, General San Martín.  
+\newline 
+Cabe recordar en este instancia que los partidos de Esteban Echeverría ,
+ Florencio Varela y Morón sufrieron modificaciones administrativa en el período 1991-2001.-
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png}}
+  \caption{CV. Coeficiente de variación por departamento -1991-2022}
+  \label{fig:CVOutliersPoblacion}
+\end{figure}
+En las figuras \ref{fig:CVoutCurvasMedia} y \ref{fig:CVoutCurvasAlta} puede observarse la curvas poblacionales de los departamentos destacados.
+
+ 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png}}
+  \caption{Curvas poblacionales de alta dispersión - Población Media}
+  \label{fig:CVoutCurvasMedia}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png}}
+  \caption{Curvas poblacionales de alta dispersión - Población Alta}
+  \label{fig:CVoutCurvasAlta}
+\end{figure}
+
+
+
 %  MAIN SECTIONS
 
 
@@ -674,4 +829,3 @@ ahora densidad!!!
 % %%%%%%%%%%%%%%%%%%%%%%%%55
 
 \end{document}
-
