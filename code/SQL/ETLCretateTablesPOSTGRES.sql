@@ -55,8 +55,8 @@ TRUNCATE TABLE public.proyecciones;
 
 
 ----- GEOMETRY TABLES---
---1) departamento created from POSTGIS
---2)amba+censos
+--1) departamento created from QGIS
+--2) amba+censos
 
 
 ---Now weed need to alter to add  COlumns  para data de los censos

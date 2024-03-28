@@ -24,6 +24,21 @@
 \usepackage{pdflscape} % For landscape page
 \usepackage{subcaption}
 \usepackage{rotating}
+\usepackage{listings}
+\usepackage[T1]{fontenc} % Required for accented characters
+\lstset{
+    language=SQL,
+    basicstyle=\ttfamily,
+    keywordstyle=\bfseries,
+    commentstyle=\itshape,
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    breaklines=true,
+    captionpos=b
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -216,8 +231,13 @@ b es la tasa bruta de natalidad;\newline
 D es la cantidad de defunciones;\newline
 d es la tasa bruta de mortalidad.\newline
 
- ---------------------------EN DESARROLLO------------------------4
+ ---------------------------EN DESARROLLO------------------------
  \newline
+
+
+
+
+ 
 % El método de correlación de razones se aplica asumiendo que la evolución de la población
 % está correlacionada con la variación de una o más variables sintomáticas. La correlación se estima
 % por medio de un modelo de regresión, en tanto que la variación se establece por la razón entre los
@@ -353,10 +373,32 @@ Como herramientas se contemplan los lenguajes Python y SQL. Los datos se trabaja
  \end{enumerate}
  \section{DESARROLLO}
 
- \section{Obtención de datos desde las fuentes. Consolidación Dataset }
- En primera instancia se busca recopilar los datos de los CENSOS poblacionales correspondientes desde 1991. Es decir Censos 1991, 2001, 2010 y 2022.  En general el INDEC dispone la información en formatos CSV o bien archivos Microsoft Excel  de difícil procesado para su ingesta por parte de un  proceso de ETL.  En primera instancia los archivos no cuentan con estructura de encabezados en la primera línea, presentan descripciones y comentarios en las primeras líneas y no respetan formatos uniformes según la dimensión de análisis de los datos dentro del mismo periodo censal. Por otra parte, el formato de presentación y las variables relevadas se han visto modificadas desde el censo 1991 hasta el 2022. Una vez analizada las variables comunes a todos estos censos, fue necesario un pre-proceso manual de los archivos para lograr uniformidad y consistencia de forma de que sean tomados por el proceso de ETL .
- En cuanto a las variables censales comunes al
-  período analizado se toman las indicadas en el cuadro  \ref{variables}.
+ \section{Obtención de datos fuente. Consolidación Dataset }
+ En primera instancia se busca recopilar los datos de los CENSOS poblacionales 
+ correspondientes desde 1991 elaborados por el INDEC( Instituto Nacional de Estadísticas y Censos, Argentina). 
+  Se obtuvieron desde los repositorios web del INDEC los datos correspondientes a los censos de  1991, 2001, 2010 y 2022 [1][2].
+   En general el INDEC dispone la información en formatos CSV o 
+ bien archivos Microsoft Excel  de difícil procesado para su ingesta por parte de un  proceso de ETL. \newline
+  En primera instancia los archivos no cuentan con estructura de encabezados en la primera línea, espacios en blanco, además de que 
+  presentan descripciones y comentarios en las primeras líneas. En general no respetan formatos uniformes según
+  la dimensión de análisis ( Población por Sexo, población por edad , etc) de los datos dentro del mismo periodo censal.
+  Por otra parte, el formato de presentación de los  archivos ".csv" así como  las variables relevadas se han 
+  visto modificadas desde el censo 1991 hasta el 2022. Por ejemplo el censo 1991 no relevó la cantidad de habitantes
+  en viviendo colectivas y particulares.\newline
+Una vez analizada las variables comunes a todos estos censos, fue necesario un pre-proceso manual
+ de los archivos para lograr uniformidad y consistencia de forma de que sean tomados por el proceso de ETL . Se removieron espacios en blanco y comentarios
+en la parte superior, eliminaron columnas a la izquierda.Luego fue necesario unificar y adaptar todos los archivos a la misma
+ cantidad y nomenclatura de columnas.
+Siempre buscando lograr un archivo ".csv" con la estructura de "Headers"  seguido de los datos,sin espacios en blanco.\newline
+Es importante aclarar que existe una base consolidada -REDATAM [9]- con toda la información censal para los censos 2001 y 2010,
+ la misma lamentablemente no está disponible para los censos de 1991 y 2022. 
+ REDATAM [9] es un software para procesamiento estadístico especializado en microdatos de
+  censos de población y vivienda, encuestas y estadísticas vitales,
+  desarrollado por el CELADE  -  División de Población de la CEPAL, de las Naciones Unidas.
+Durante la fase de investigación de fuentes se analizó y manipuló este software sin resultados alentadores. Esta base sólo puede accederse mediante este software específico
+, no disponiendo de back ups accesibles y en general las salidas de las consultas manuales por intefase de usuario son también archivos CSV no normalizados.
+que requieren post-proceso.\newline
+ Finalmente las variables censales defininas ,comunes al  períod2o 1991-2022,se indican en el cuadro  \ref{variables}.
  
 
  \begin{table}[htbp]
@@ -380,12 +422,30 @@ Como herramientas se contemplan los lenguajes Python y SQL. Los datos se trabaja
      \label{variables}
  \end{table}
 
- Es importante aclarar que existe una base consolidada -REDATAM [9]- con toda la información censal para los censos 2001 y 2010, la misma no está disponible para los censos de 1991 y 2022. REDATAM [9] es un software para procesamiento estadístico especializado en microdatos de censos de población y vivienda, encuestas y estadísticas vitales, desarrollado por el CELADE  -  División de Población de la CEPAL, de las Naciones Unidas.  A su vez esta base sólo puede accederse mediante este software específico, no disponiendo de back ups y en general las salidas de las consultas son también archivos CSV no normalizados que requieren post-proceso.
  \subsection{Dimensión Departamento- Slowly Changing Dimension }
- Al analizar los distintos censos desde 1991 hasta 2022 los departamentos del AMBA han modificado su división político – administrativa. Es decir, se han creado varios partidos nuevos, así como fusionado otros. Esto general que la dimensión departamento cambia a través de los distintos censos. Es por esto que se adopta un enfoque tipo Slowly Changing dimensión tipo 3. Donde se impacta el cambio de departamento, conservando en el registro el valor anterior, de que departamento proviene y la superficie correspondiente asociada. Esto es necesario para poder luego procesar información consistente en cuento a la granularidad analizada. 
- Mismo el INDEC consigna :" Nota: con el fin de posibilitar la comparación entre los Censos 1991 y 2001, los datos que 
+ Al analizar los distintos censos desde 1991 hasta 2022 los departamentos del AMBA han modificado su división político – administrativa.
+  Es decir, se han creado partidos nuevos,en otros casos partidos han cedido superfice, o bien se han fusionado otros.
+  Esto general que la dimensión departamento cambia a través de los distintos censos. \newline
+  Se analiza el enfoque \textbf{Slowly Changing Dimensions} para bases de datos.En general se trata de impactar cambios en las dimesiones del
+  modelo , ya sea esquema estrella o copo de nieve. Este concepto fue introducido por Kimball(1996)[**12], el mismo se
+   refiere a casos donde las dimensiones sufren pequeñas modificaciones que afectan el modelo lógico del almacén de datos.\newline
+  El caso de Slowly Changing Dimensions \textbf{TIPO 1} corresponde a cambios esperádicos, no permanentes, que implican una modificación en algun atributo 
+  de la dimension. En definitiva es una correcion de este atributo, se ejecuta mediante UPDATE de las filas involucradas sin conservar el valor anterior del atributo.
+  La instancia de Slowly Changing Dimension \textbf{TIPO 2} esta basada en la teoría de datos temporales, donde para la versión que es afectada se produce un versionao.
+  Es decir, se inserta una nueva tupla cada vez que se produce un cambio. Se extiende la dimension generalmente con columnas "FROM" y  "TO" que indican 
+  fechas de validez para los atributos correspondientes a ese valor de la dimensión. Obviamente esto afecta las consultas y todos los procesos
+  de ETL involucrados en el almacén de datos. 
+  Por último se habla de  Slowly Changing Dimension \textbf{TIPO 3} cuando si bien se desea mantener el cambio y relevar el mismo sin sobrescribir la tupla, no se 
+  mantiene el historial de la dimensión.En este caso sólo se almacena el estados actual y pasado de la misma.Simplemente se agrega una columna
+  por cada atributo sujeto a cambios.\newline
+  Es por esto que utiiza en este caso para la dimensión Departamento enfoque \textbf{SCD tipo 3}. Donde se impacta el cambio de departamento,
+   conservando en el registro el valor anterior, de que departamento proviene y la superficie correspondiente asociada. 
+   Esto es necesario para poder luego procesar información consistente en cuento a la granularidad utilizada. Esto resulta particularmente importante para analizar
+  las superficies de los departamentos.\newline
+  En lo que respecta a las variables poblacionales se han  reclasificado los datos de 1991 para corresponder con la
+  división político-administrativa de año 2001. El INDEC consigna :" Nota: con el fin de posibilitar la comparación entre los Censos 1991 y 2001, los datos que 
  corresponden al año 1991 fueron reprocesados según la división político - administrativa
- vigente al año 2001." [8] INDEC, 2001
+ vigente al año 2001." [8] INDEC, 2001\newline
  
  En el cuadro \ref{tab:DimDepto} puede verse la dimensión departamento con los campos agregados y
   los comentarios correspondientes en cada caso.
@@ -430,16 +490,53 @@ Como herramientas se contemplan los lenguajes Python y SQL. Los datos se trabaja
     \label{tab:DimDepto}
 \end{table}
 
-\subsection{Diccionario de Departamentos  } 
-Debido a las inconsistencias y falta de normalización de los archivos CSV que provee el INDEC, fue necesaria la creación de un diccionario de departamento asociando las distintas acepciones del nombre de departamento con su correspondiente código para que el proceso de ETL pudiese utilizar los códigos de departamento como clave foránea común a todos los Censos Nacionales. Se encontraron casos donde el mismo departamento figura nombrado con tílde ,  
-sin tílde , con espacios o abreviaturas en el campo. De esta forma en la ingesta ( ETL) se buscaba el código de departamento correspondiente, que 
-funciona como clave única.
-
 \subsection{Proyecciones INDEC 2010-2025  }
 Se incorpora también al conjunto de datos que se analizarán proyecciones realizadas por el INDEC [3] que indican la “Población estimada al 1 de julio de
- cada año calendario por sexo, según partido. Provincia de Buenos Aires. Años 2010-2025”.
+ cada año calendario por sexo, según partido. Provincia de Buenos Aires. Años 2010-2025”. Las mismas se utilizarán para comparar los resultados de los censos, acompañadas De
+ proyecciones realizadas por otros métodos. \newline
+ La  descripción de este conjunto  puede verse en el  cuadro\ref{tab:ProyeccSummary},mientras el cuadro\ref*{label} muestra la estructura típica del 
+ dataset.
 
+ \begin{table}[htbp]
+  \centering
+  \begin{tabular}{ccccccc}
+  \toprule
+  \textbf{Column} & \textbf{Non-Null Count} & \textbf{Dtype} \\
+  \midrule
+  id            & 384 non-null & int64 \\
+  CodigoDpto    & 384 non-null & object \\
+  ano           & 384 non-null & int64 \\
+  Departamento  & 384 non-null & object \\
+  Poblacion     & 384 non-null & int64 \\
+  Varones       & 384 non-null & int64 \\
+  Mujeres       & 384 non-null & int64 \\
+  \bottomrule
+  \end{tabular}
+  \caption{Summary del dataset public.proyecciones.}
+  \label{tab:ProyeccSummary}
+  \end{table}
 
+  \begin{table}[htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{id}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{CodigoDpto}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{ano}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Departamento}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Poblacion}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Varones}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Mujeres}} \\ \hline
+    1 & 6028 & 2010 & Almirante Brown & 557025 & 273352 & 283673 \\
+    25 & 6028 & 2011 & Almirante Brown & 561349 & 275570 & 285779 \\
+    49 & 6028 & 2012 & Almirante Brown & 565509 & 277794 & 287715 \\
+    73 & 6028 & 2013 & Almirante Brown & 569911 & 279980 & 289931 \\
+    97 & 6028 & 2014 & Almirante Brown & 574263 & 282143 & 292120 \\
+    121 & 6028 & 2015 & Almirante Brown & 578513 & 284281 & 294232 \\
+    145 & 6028 & 2016 & Almirante Brown & 582541 & 286295 & 296246 \\
+    169 & 6028 & 2017 & Almirante Brown & 586564 & 288288 & 298276 \\
+    193 & 6028 & 2018 & Almirante Brown & 590418 & 290157 & 300261 \\
+    217 & 6028 & 2019 & Almirante Brown & 594270 & 292051 & 302219 \\
+    ........ &&&&&& \\
+    \hline
+    \end{tabular}
+    \caption{ Proyecciones del valor pobalción por departamento Año 2010 a 2025 . Fuente INDEC}
+    \label{tab:proyecHead}
+    \end{table}
 \subsection{Componente geográfico }
 Con el objetivo de enriquecer el dataset se incorpora una tabla con los polígonos geográficos de cada departamento.
  La misma se obtiene del Instituto Geográfico Nacional (IGM) [10], de donde se obtiene la capa SIG para 
@@ -473,14 +570,6 @@ Se desarrollo justamente un proceso de ETL en Python y SQL mediante en primera c
 para luego producir la ingesta ,transformar en caso de que sea necesario, de los diferentes inputs que van a componer el modelo de datos.	
 
 
-\subsection{Diagrama de entidad relación }
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/DER.jpg}
-    \caption{Diagrama de Entidad Relación}
-  \label{fig:DER}
-\end{figure}
 
 
 \section{Metodologías Aplicadas}
@@ -580,13 +669,13 @@ al fenómeno poblacional.
 \end{figure}
 
 
-\subsubsection{Población y densidad en vista geográfica}
+\subsubsection{Población.Vista geográfica}
 
 En este caso se busca una visualización geográfica del dataset. Utilizando el sofware QGIS conectado directamente a la base de 
 datos AMBA (POSTGRES) se pudo disponer la información de cada Departamento con su geolocalización.
- Se detalla en la figura \ref{fig:AllPob} la poblacion total para cada departamento ( Censos 1991 -2022).Se observa claramente que el distrito más poblado 
- es La Matanza. Debido su extensión no es el departamento con mayor densidad poblacional en [hab/\textup{km\textsuperscript{2}}] figura \ref{fig:DensidadAll} ,
- los distritos más densamente poblados son Lanús y Vicente López. 
+ Se detalla en la figura \ref{fig:AllPob} la poblacion total para cada departamento (Censos 1991 -2022).Se observa claramente que el distrito más poblado 
+ es La Matanza.
+
 %%% QGIS GRAPHICS
 \begin{landscape}
 \begin{figure}[p] % Use 'p' to force the figures to be placed on a separate page
@@ -624,53 +713,14 @@ datos AMBA (POSTGRES) se pudo disponer la información de cada Departamento con 
 \end{landscape}
 
 
-\begin{landscape}
-  \begin{figure}[p] % Use 'p' to force the figures to be placed on a separate page
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg}}
-        \caption{AMBA- Población total Censo 1991}
-    \label{fig:dens1991}
-    \end{subfigure}
-    \quad % Add some horizontal space between subfigures
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg}}
-        \caption{AMBA- Densidad [hab/km2] Censo  2001}
-      \label{fig:dens2001}
-    \end{subfigure}
-    
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg}}
-        \caption{AMBA- Densidad [hab/km2] Censo 2010}
-      \label{fig:dens2010}
-    \end{subfigure}
-    \quad % Add some horizontal space between subfigures
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg}}
-        \caption{AMBA- Densidad [hab/km2] Censo 2022}
-      \label{fig:dens2022}
-    \end{subfigure}
-    \caption{AMBA- Densidad [hab/km2] Censos 1991 2022}
-  \label{fig:DensidadAll}
-  \end{figure}
-  
-  \end{landscape}
-
-
-
-  \subsubsection{Población - Ratios de crecimento}
+ \subsubsection{Población - Ratios de crecimento}
   En este caso se determinaron los ratios de crecimento entre censos consecutivos para cada departamento.
   Para este análisis se trata de manera difrenciada aquellos municipios que han sufrido modificaciones administrativas
   desde 1991  a 2001, donde se  que al  desmembrarse en varios partidos, resignando superficie, algunas tasas o ratios de crecimiento 
   se muestran negativos. Asimismo partidos que ha visto incrementada su superfice presentan  tasas de crecimiento no representativas del 
   fenómeno demográfico.\newline
   Por otra parte partidos que desaparecen o se crean en el año  2001 no se consideran el valor del ratio para el intervalo 1991-2001.\newline
-  
-  En el cuadro \ref{tab:RatiosAll} se puede observar los valores obtenidos. Para el año en cuestion la tasa surge de dividir el valor poblacional
+    En el cuadro \ref{tab:RatiosAll} se puede observar los valores obtenidos. Para el año en cuestion la tasa surge de dividir el valor poblacional
   del censo de este año sobre el valor poblacional del censo anterior,expresado en porcentaje.\newline
   Es decir: \newline
   \begin{equation}
@@ -771,7 +821,7 @@ Se  grafica a continación (Figura \ref{fig:OutlierlineasPob}) la curva poblaci�
 \end{figure}
 
 
-\subsubsection{ Tasas de crecimento intercensal. coeficiente de Variación}
+\subsubsection{ Tasas de crecimento intercensal.Coeficiente de Variación}
  Con el objetivo de profundizar el análsis de las tasas de crecimiento
  se procedió a calcular luego la desviación estandar y el coeficiente de variación por Departamento.\newline
 En primera instancia se agrupa por departamento para determinar la media y la desviación estándar de cada subset de datos.
@@ -790,15 +840,20 @@ tanto negativos como positivos.A saber : Vincente López, Morón, Tres de Febrer
 Esteban Echeverría, General San Martín.  
 \newline 
 Cabe recordar en este instancia que los partidos de Esteban Echeverría ,
- Florencio Varela y Morón sufrieron modificaciones administrativa en el período 1991-2001.-
+ Florencio Varela y Morón sufrieron modificaciones administrativa en el período 1991-2001.
+ En la figura \ref{fig:CVoutCurvasMedia} así como en la figura\ref{fig:CVoutCurvasAlta} puede observarse la curvas poblacionales
+ de los departamentos destacados.\newline
+En estos casos se prestará particular atención a las predicciones hechas por el INDEC así como las metodologías que se implementen 
+para la estimación de la curva poblacional, es esperable una mayor error de prediccion en estos casos cuyas curvas prensetan singularidades respecto a
+los municipios inmediatamente aledaños.
+
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png}}
-  \caption{CV. Coeficiente de variación por departamento -1991-2022}
-  \label{fig:CVOutliersPoblacion}
+  \caption{CV.Coeficiente de variación por departamento -1991-2022}
+\label{fig:CVOutliersPoblacion}
 \end{figure}
-En las figuras \ref{fig:CVoutCurvasMedia} y \ref{fig:CVoutCurvasAlta} puede observarse la curvas poblacionales de los departamentos destacados.
 
  
 \begin{figure}[htbp]
@@ -812,9 +867,135 @@ En las figuras \ref{fig:CVoutCurvasMedia} y \ref{fig:CVoutCurvasAlta} puede obse
   \centering
   \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png}}
   \caption{Curvas poblacionales de alta dispersión - Población Alta}
-  \label{fig:CVoutCurvasAlta}
+\label{fig:CVoutCurvasAlta}
 \end{figure}
 
+
+\subsection{Densidad de Población}
+
+En el dataset se incorpora la densidad de población en habitantes/\textup{km\textsuperscript{2}}, lógicamente estos valores 
+se ven notablemente afectados por la reorganización político administrativa desde 1991 a 2001.\newline
+Si analizamos la distribución de los valores de densidad para cada censo, puede observarse distribuciones homogeneas simétricas, 
+con un incremento en al mediana de cada población censal desde 2001 a 2022.  El análisis univariado de esta variable puede observarse 
+en la figura\ref{fig:DensPoblBoxplot}  y la figura\ref{fig:DensPoblLineas}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png}}
+  \caption{Densidad de Población.Análisis Univariado}
+  \label{fig:DensPoblBoxplot}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png}}
+  \caption{Densidad de Población.Análisis Univariado}
+  \label{fig:DensPoblLineas}
+\end{figure}
+
+
+\subsubsection{Densidad de Población. Vista geográfica}
+Utilizando el sofware QGIS conectado directamente a la base de 
+datos AMBA (POSTGRES) se pudo disponer la información de cada Departamento con su geolocalización.
+Si bien el distrito más poblado  es La Matanza,bebido su extensión no es el departamento con mayor densidad poblacional en [hab/\textup{km\textsuperscript{2}}] figura \ref{fig:DensidadAll} ,
+ los distritos más densamente poblados son Lanús y Vicente López. 
+
+
+\begin{landscape}
+  \begin{figure}[p] % Use 'p' to force the figures to be placed on a separate page
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg}}
+        \caption{AMBA- Población total Censo 1991}
+    \label{fig:dens1991}
+    \end{subfigure}
+    \quad % Add some horizontal space between subfigures
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg}}
+        \caption{AMBA- Densidad [hab/km2] Censo  2001}
+      \label{fig:dens2001}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg}}
+        \caption{AMBA- Densidad [hab/km2] Censo 2010}
+      \label{fig:dens2010}
+    \end{subfigure}
+    \quad % Add some horizontal space between subfigures
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{{C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg}}
+        \caption{AMBA- Densidad [hab/km2] Censo 2022}
+      \label{fig:dens2022}
+    \end{subfigure}
+    \caption{AMBA- Densidad [hab/km2] Censos 1991 2022}
+  \label{fig:DensidadAll}
+  \end{figure}
+  
+  \end{landscape}
+
+\subsection{Tipo de Vivienda}
+A partir del censo 2001 se incorpora como atributo descriptivo en cada censo la composición  o tipo de la vivienda, ya sea de tipo particular o colectiva.
+Se detalla en cada caso la cantidad de viviendas partciulares('vivpart') en determinado departamento, así como la cantidad de viviendas
+colectivas presentes. Se presenta entonces la posibilidad de realizar un analisis univarido del porcentaje de viviendas particulares
+respecto al total de viviendas para un determinado departamento y año censal.\newline
+Se agrega al dataset una nueva columna definida como:
+\begin{equation}
+  {\text{VivPart\%}} = 
+ \frac{\text{VivPart}}{\text{VivPart} +\text{VivColTot}} \times 100
+\end{equation}
+Surge de inmediato que mayoría de la población vive en viviendas particulaes (mayor a 99.9\%).Al analizar el comportamiento de este indicador se observa un leve incremento sostenido en el tiempo desde 1991 hasta 2022. 
+Es decir que se observan cada vez más peso de las viviendas particulares. El análisis univarido de este indicador puede
+observarse en la figura\ref{fig:VivpartBoxplot} así como en la figura\ref{fig:VivpartLines} 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png}}
+  \caption{Composición de viviendas.Análisis Univariado}
+  \label{fig:VivpartBoxplot}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png}}
+  \caption{Composición de viviendas.Análisis Univariado}
+  \label{fig:VivpartLines}
+\end{figure}
+
+
+
+\subsection{Índice de Masculinidad}
+Un indicador habitual de las muestras poblacionales es el índice de masculinidad.
+Resultado de dividir el número de hombres entre el número de mujeres de una unidad geográfica o administrativa, 
+generalmente multiplicado por 100 expresado como el número de hombres por cada 100 mujeres.
+\newline 
+Es decir: 
+\begin{equation}
+  {\text{IndMasc}} = 
+ \frac{\text{Varones}}{\text{Mujeres} } \times 100
+\end{equation}
+
+Al analizar el comportamiento del ínidice a lo largo del tiempo se observa un descenso sostenido del mismo desde 1991 hasta 2022.
+Particularmente el máximo de la muestra presenta un descenso de 5 puntos porcenturales para el año 2022, así como 2 puntos porcentuales la mediana.\newline
+ Esto puede observarse en la figura\ref{fig:IndMascBox} así como en la figura\ref{fig:IndMAsvLinea}
+
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png}}
+  \caption{Índice de Masculinidad.Análisis Univariado}
+\label{fig:IndMascBox}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png}}
+  \caption{Índice de Masculinidad.Análisis Univariado}
+\label{fig:IndMAsvLinea}
+\end{figure}
 
 
 %  MAIN SECTIONS
@@ -826,6 +1007,229 @@ En las figuras \ref{fig:CVoutCurvasMedia} y \ref{fig:CVoutCurvasAlta} puede obse
 
 % V.	Comparación entre los modelos 
 % VI.	Conclusiones
-% %%%%%%%%%%%%%%%%%%%%%%%%55
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%% ANEEEEXOOOOOOOOOOOOOOOOOOOOOOOO%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{ANEXO}
+ \subsection{Diccionario de Departamentos } 
+Debido a las inconsistencias y falta de normalización de los archivos CSV que provee el INDEC,
+ fue necesaria la creación de un diccionario de departamento asociando las distintas acepciones del nombre de
+  departamento con su correspondiente código para que el proceso de ETL pudiese utilizar los códigos de departamento 
+  como clave foránea común a todos los Censos Nacionales.
+  Se encontraron casos donde el mismo departamento figura nombrado con o sín  tílde,con espacios o abreviaturas en el campo. \newline
+De esta forma en la ingesta (ETL) se buscaba el código de departamento correspondiente, que funciona como clave única.
+ El formato del diccionario puede verse en el siguiente cuadro\ref{tab:diccionario}.
+\begin{table}[htb]
+  \centering
+  \begin{tabular}{|c|c|}
+  \hline
+  \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{CodigoDpto}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Departamento}} \\ \hline
+  6005 & General Sarmiento \\
+  6005 & General Sarmiento (4) \\
+  6260 & Esteban Echeverría (1) \\
+  6260 & Esteban Echeverria \\
+  6260 & Esteban Echeverría \\
+  6270 & Ezeiza \\
+  6270 & Ezeiza (2) \\
+  6274 & Florencio Varela (3)  \\
+  6274 & Florencio Varela \\
+  6274 & Florencio Varela (3)  \\
+  \hline
+  \end{tabular}
+  \caption{Diccionario.Primeras 10 filas}
+  \label{tab:diccionario}
+  \end{table}
+
+ \subsection{Diagrama de entidad relación }
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/DER.jpg}
+    \caption{Diagrama de Entidad Relación}
+    \label{fig:DER}
+\end{figure}
+
+\subsubsection{Script Creación Tablas} 
+  \begin{lstlisting}[caption={CreateTables.sql},label={lst:sql_CreateTables}]
+    --##POBLACION
+        CREATE TABLE IF NOT EXISTS public.poblacion (
+        Id SERIAL PRIMARY KEY,
+        "AnoCenso" VARCHAR(50),
+        "CodigoDpto" VARCHAR(50),
+        "Departamento" VARCHAR(150),
+        "Poblacion" INT,
+        "Varones" INT,
+        "Mujeres" INT,
+        "VivPartTot" INT,
+        "VivColectTot" INT,
+        "IndMasc" FLOAT,
+      "Superficie" INT,
+      "DensPob" FLOAT 
+    );
+    
+    TRUNCATE TABLE public.poblacion;
+    
+    --## DIM Departamento
+    CREATE TABLE IF NOT EXISTS public.DimDepto (
+        Id SERIAL PRIMARY KEY,
+        "CodigoDpto" VARCHAR(50),
+        "Departamento" VARCHAR(150),
+        "PartidoFrom" VARCHAR(150),
+        "CodigoFrom" VARCHAR(50),
+        "Sup1991" INT,
+        "Sup2001" INT,
+      "IsAMBA" BOOLEAN,
+        "Comentarios" VARCHAR(550)
+    
+    );
+    
+    TRUNCATE TABLE public.DimDepto;
+    
+    --##DICCIONARIO DATOS PARTIDO CODIGO
+    CREATE TABLE IF NOT EXISTS public.diccionario (
+        "CodigoDpto" VARCHAR(50),
+        "Departamento" VARCHAR(150)
+    );
+    
+    TRUNCATE TABLE public.diccionario;
+    
+    --##PROYECCIONES
+    CREATE TABLE IF NOT EXISTS public.proyecciones (
+        Id SERIAL PRIMARY KEY,
+        "CodigoDpto" VARCHAR(50),
+        "ano" INT,
+        "Departamento" VARCHAR(150),
+        "Poblacion" INT,
+        "Varones" INT,
+        "Mujeres" INT
+    );
+    
+    TRUNCATE TABLE public.proyecciones;
+    
+    
+    ----- GEOMETRY TABLES---
+    --1) departamento created from QGIS
+    --2) amba+censos
+    
+    
+    ---Now weed need to alter to add  COlumns  para data de los censos
+    
+    CREATE TABLE  IF NOT EXISTS geo.amba_pob AS
+    SELECT *
+    FROM geo."vAMBOgeom"
+    ALTER TABLE geo.amba_pob 
+    ADD COLUMN pob1991 INT,
+    ADD COLUMN pob2001 INT,
+    ADD COLUMN pob2010 INT,
+    ADD COLUMN pob2022 INT;
+   ##############
+    ALTER TABLE geo.amba_pob 
+    ADD COLUMN dens1991 INT,
+    ADD COLUMN dens2001 INT,
+    ADD COLUMN dens2010 INT,
+    ADD COLUMN dens2022 INT;
+    
+    UPDATE geo.amba_pob AS am
+    SET pob1991 = c.pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='1991';
+    --- Update Poblacion de los censos
+    UPDATE geo.amba_pob AS am
+    SET pob2001 = c.pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='2001';
+    
+    UPDATE geo.amba_pob AS am
+    SET pob2010 = c.pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='2010';
+    UPDATE geo.amba_pob AS am
+    SET pob2022 = c.pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='2022';
+    
+    --- Update DENSIDAD de los censos
+    UPDATE geo.amba_pob AS am
+    SET dens1991 = c.dens_pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='1991';
+    UPDATE geo.amba_pob AS am
+    SET dens2001 = c.dens_pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='2001';
+    
+    UPDATE geo.amba_pob AS am
+    SET dens2010 = c.dens_pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='2010';
+    UPDATE geo.amba_pob AS am
+    SET dens2022 = c.dens_pob
+    FROM  public.v_censos_amba c
+    WHERE am.cod_depto = c.cod_depto AND anio='2022';
+    
+  \end{lstlisting}
+\subsubsection{Scrip PopulateTables.sql} 
+    \begin{lstlisting}[caption={PopulateTables.sql},label={lst:sql_Populate}]
+      -- Step 1: Insert data from CSV file without the primary key column
+      --- POBLACION START---
+      COPY public.poblacion ("AnoCenso", "CodigoDpto", "Departamento", "Poblacion", "Varones", "Mujeres", "VivPartTot", "VivColectTot", "IndMasc","Superficie","DensPob") 
+      FROM 'C:/Temp/1991_A~1.CSV' 	
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+      
+      
+      COPY public.poblacion ("AnoCenso", "CodigoDpto", "Departamento", "Poblacion", "Varones", "Mujeres", "VivPartTot", "VivColectTot", "IndMasc","Superficie","DensPob") 
+      FROM 'C:/Temp/1991_Resto.CSV' 	
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+      
+      
+      
+      COPY public.poblacion ("AnoCenso", "CodigoDpto", "Departamento", "Poblacion", "Varones", "Mujeres", "VivPartTot", "VivColectTot", "IndMasc","Superficie","DensPob") 
+      FROM 'C:/Temp/2001.CSV' 	
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+      
+      
+      COPY public.poblacion ("AnoCenso", "CodigoDpto", "Departamento", "Poblacion", "Varones", "Mujeres", "VivPartTot", "VivColectTot", "IndMasc","Superficie","DensPob") 
+      FROM 'C:/Temp/2010.CSV'
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+      
+      
+      COPY public.poblacion ("AnoCenso", "CodigoDpto", "Departamento", "Poblacion", "Varones", "Mujeres", "VivPartTot", "VivColectTot", "IndMasc","Superficie","DensPob") 
+      FROM 'C:/Temp/2022.CSV'
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+      
+      -- POBLACION END------
+      ---- DICCIONARIO----
+      COPY public.diccionario ("CodigoDpto", "Departamento") 
+      FROM 'C:/Temp/DiccionarioPartidosCodigo.CSV'
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+      
+      
+      ---	DIMDepto----
+      COPY public.dimdepto (
+      "CodigoDpto",
+      "Departamento",
+      "PartidoFrom",
+      "CodigoFrom",
+      "Sup1991",
+      "Sup2001",
+      "IsAMBA",
+      "Comentarios") 
+      FROM 'C:/Temp/DIM Departamento.CSV'
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+      
+      
+      ---	Proyeccion 2025----
+      COPY public.proyecciones (
+      "CodigoDpto",
+      "ano",
+      "Departamento",
+      "Poblacion",
+      "Varones",
+      "Mujeres") 
+      FROM 'C:/Temp/proy_1025.CSV'
+      WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
+    \end{lstlisting}
 
 \end{document}

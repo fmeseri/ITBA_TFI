@@ -58,7 +58,3 @@ FROM 'C:/Temp/proy_1025.CSV'
 WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
 
 
-
------ amba_censos
-Select pob1991 FROM geo.amba_censos
-
