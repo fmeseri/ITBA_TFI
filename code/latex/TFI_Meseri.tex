@@ -493,9 +493,11 @@ que requieren post-proceso.\newline
 \subsection{Proyecciones INDEC 2010-2025  }
 Se incorpora también al conjunto de datos que se analizarán proyecciones realizadas por el INDEC [3] que indican la “Población estimada al 1 de julio de
  cada año calendario por sexo, según partido. Provincia de Buenos Aires. Años 2010-2025”. Las mismas se utilizarán para comparar los resultados de los censos, acompañadas De
- proyecciones realizadas por otros métodos. \newline
- La  descripción de este conjunto  puede verse en el  cuadro\ref{tab:ProyeccSummary},mientras el cuadro\ref*{label} muestra la estructura típica del 
- dataset.
+ proyecciones realizadas por otros métodos.\newline
+ La  descripción de este conjunto  puede verse en el  cuadro\ref{tab:ProyeccSummary},mientras el cuadro\ref{tab:proyecHead} muestra la estructura típica del 
+ dataset.EN forma gráfica se dividen los departamentos según la población inicial para el año 2010. Se gráfica por un lado aquellos
+ departamentos con una poblacion menor a 300.000 habitantes, figura\ref{fig:proy300k}. Luego aquellos con una población de entre 300.000 y 700.000,
+  figura\ref{fig:proy700k}. Por último La Matanza cuya población supera ampliamento los 700.000 habitantes, figura\ref{fig:proyMayor700k}
 
  \begin{table}[htbp]
   \centering
@@ -534,9 +536,30 @@ Se incorpora también al conjunto de datos que se analizarán proyecciones reali
     ........ &&&&&& \\
     \hline
     \end{tabular}
-    \caption{ Proyecciones del valor pobalción por departamento Año 2010 a 2025 . Fuente INDEC}
+    \caption{ Proyecciones del valor población por departamento Año 2010 a 2025 .Fuente INDEC}
     \label{tab:proyecHead}
     \end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png}}
+  \caption{Población por departamento 2010-2025.INDEC}
+  \label{fig:proy300k}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png}}
+  \caption{Población por departamento 2010-2025.INDEC}
+  \label{fig:proy700k}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png}}
+  \caption{Población por departamento 2010-2025.INDEC}
+  \label{fig:proyMayor700k}
+\end{figure}
+
 \subsection{Componente geográfico }
 Con el objetivo de enriquecer el dataset se incorpora una tabla con los polígonos geográficos de cada departamento.
  La misma se obtiene del Instituto Geográfico Nacional (IGM) [10], de donde se obtiene la capa SIG para 

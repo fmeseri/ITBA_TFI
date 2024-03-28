@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711638218.10801 "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" "build/TFI_Meseri.pdf" "TFI_Meseri" 1711638223.21939 0
+["pdflatex"] 1711657974.17659 "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" "build/TFI_Meseri.pdf" "TFI_Meseri" 1711657978.82515 0
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1709834745 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0800.pk" 1709601708 19872 8f5774b5f8c36f1b5b8b963b0601c29f ""
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1709572328 25420 5088be6e4e45c08f86d73f2f4eda084d ""
@@ -285,13 +285,16 @@
   "C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png" 1711234003 31527 56c26dbfd7d89bafa0aa1235a682d184 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png" 1710100728 14309 5bd48edf791c8611651098f3238240ef ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png" 1709849658 118392 1d7d3149d0673bcb9000dc7bfa8c8cc9 ""
+  "C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png" 1711657025 47821 41328d01a099c92fbd24aed6de673f0d ""
+  "C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png" 1711657003 104061 afb1dedf44b9586403f264b116158527 ""
+  "C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png" 1711657012 154360 bf9870629dd22268fd5a7915ad7e26af ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png" 1711234419 43235 7fe7671befb748178cff74a9fd31dc8e ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png" 1711232334 28563 63ff11aa97318872df74f97ed1b9673a ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png" 1711234089 39427 f6d19fece641bd9dd4d07a4ea1190d5d ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png" 1711234539 36329 7399a5a312f43b1ef227500c9c91e5e8 ""
-  "TFI_Meseri.tex" 1711638211 71514 ff98fc686bca73ebd39823ee01a18d64 ""
-  "build/TFI_Meseri.aux" 1711638222 10470 93b2a6734c008ee61631e78aa2f553e9 "pdflatex"
-  "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" 1711638211 71514 ff98fc686bca73ebd39823ee01a18d64 ""
+  "TFI_Meseri.tex" 1711657973 72644 ad8ce95d0f557490830ca932fb55267b ""
+  "build/TFI_Meseri.aux" 1711657978 11038 e821ae3d1c1a2d03e472e4ca550c8545 "pdflatex"
+  "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" 1711657973 72644 ad8ce95d0f557490830ca932fb55267b ""
   "img/DER.jpg" 1709560245 85216 10092a94ddcfcbc6674396a1bbad6a8c ""
   (generated)
   "build/TFI_Meseri.aux"
