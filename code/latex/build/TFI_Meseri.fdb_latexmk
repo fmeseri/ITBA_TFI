@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711657974.17659 "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" "build/TFI_Meseri.pdf" "TFI_Meseri" 1711657978.82515 0
+["pdflatex"] 1716944133.92147 "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" "build/TFI_Meseri.pdf" "TFI_Meseri" 1716944139.09278 0
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1709834745 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0800.pk" 1709601708 19872 8f5774b5f8c36f1b5b8b963b0601c29f ""
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1709572328 25420 5088be6e4e45c08f86d73f2f4eda084d ""
@@ -78,6 +78,7 @@
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
@@ -262,6 +263,7 @@
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1673775190 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/tex/latex/pgfplots/pgfplots.sty" 1621075461 4904 ee78b44e85d6fccf08cd99370557481e ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/tex/latex/psfrag/psfrag.sty" 1656241896 7349 04574cd13971edb76f06a9e2e9a108d9 ""
+  "C:/Users/Fer/AppData/Local/Programs/MiKTeX/tex/latex/tools/afterpage.sty" 1700599895 4085 b09ffbe3858cbb65749bb88cc092d0fc ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1700599895 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/tex/latex/tools/bm.sty" 1700599895 13231 2c742011581e2bf297e33520567d9464 ""
   "C:/Users/Fer/AppData/Local/Programs/MiKTeX/tex/latex/tools/calc.sty" 1700599895 10214 547fd4d29642cb7c80bf54b49d447f01 ""
@@ -276,7 +278,9 @@
   "C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg" 1709827209 1168019 f9c52612bc67a2a5b2b43314fc64f0fb ""
   "C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg" 1709827286 1089100 f326561e94a322142d47a4758c6804de ""
   "C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg" 1709827289 1094134 3e210cb6926d0279aa296427a84cac5d ""
+  "C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png" 1716060294 37547 3041a5e21d3c2764db0659c0b90de703 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png" 1710103985 76438 f219597b7bea8edba0544d39cad9654f ""
+  "C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png" 1715984970 31567 d92d1b8991b5324998960937219d94ea ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png" 1710105609 41563 c52adb333bccc5feb31b78d0a942f40f ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png" 1710105695 92838 ffa6c4f0c88694ea9c1a6ea0782e4b63 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png" 1710103569 69600 ea2a41c698e2b0ccab5780b6a62a9b2a ""
@@ -284,6 +288,7 @@
   "C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png" 1711234467 40993 bc0baa0dfc881b3a5b913b1c481fe508 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png" 1711234003 31527 56c26dbfd7d89bafa0aa1235a682d184 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png" 1710100728 14309 5bd48edf791c8611651098f3238240ef ""
+  "C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png" 1716936505 36974 ec01c2659b4079bf9675ead9734f8cc8 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png" 1709849658 118392 1d7d3149d0673bcb9000dc7bfa8c8cc9 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png" 1711657025 47821 41328d01a099c92fbd24aed6de673f0d ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png" 1711657003 104061 afb1dedf44b9586403f264b116158527 ""
@@ -292,9 +297,9 @@
   "C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png" 1711232334 28563 63ff11aa97318872df74f97ed1b9673a ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png" 1711234089 39427 f6d19fece641bd9dd4d07a4ea1190d5d ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png" 1711234539 36329 7399a5a312f43b1ef227500c9c91e5e8 ""
-  "TFI_Meseri.tex" 1711657973 72644 ad8ce95d0f557490830ca932fb55267b ""
-  "build/TFI_Meseri.aux" 1711657978 11038 e821ae3d1c1a2d03e472e4ca550c8545 "pdflatex"
-  "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" 1711657973 72644 ad8ce95d0f557490830ca932fb55267b ""
+  "TFI_Meseri.tex" 1716944132 89011 3b9cb2848950b93e898b3817d8e7247a ""
+  "build/TFI_Meseri.aux" 1716944138 13424 512a7f64d3f98da417099cae8b2b8f59 "pdflatex"
+  "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" 1716944132 89011 3b9cb2848950b93e898b3817d8e7247a ""
   "img/DER.jpg" 1709560245 85216 10092a94ddcfcbc6674396a1bbad6a8c ""
   (generated)
   "build/TFI_Meseri.aux"

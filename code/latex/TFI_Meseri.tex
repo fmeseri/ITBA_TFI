@@ -24,6 +24,8 @@
 \usepackage{pdflscape} % For landscape page
 \usepackage{subcaption}
 \usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{afterpage}
 \usepackage{listings}
 \usepackage[T1]{fontenc} % Required for accented characters
 \lstset{
@@ -158,224 +160,122 @@ Se trata de una hipótesis multivariable donde las variables podrían tener una 
   \item \textbf{Edad}. Contextual. Cuantitativa. Edad de las personas, por nivel de desagregación. INDEC
   \item\textbf{Nivel educativo}.  Contextual. Categórica Ordinal.  Se refiere al nivel de educación máximo alcanzado por un personal hasta el momento. Primario, secundario, terciario, Universitario. INDEC
   \item \textbf{Cantidad de h abitantes en el hogar}. Contextual. Cuantitativa.  Se determina como la cantidad de personas conviviendo de forma permanente bajo el mismo techo. INDEC
-  \item \textbf{Asistencia escolar}. Contextual. Categórica Ordinal.  Refiere a la asistencia o no a establecimientos educativos, desagregados por edad. 
-  %\%%%%%%%%%%%%%%%%%%%%%%%%%item  INDICE MASCULINIDAD, DENSIDAD DE POBLACION ETC:.
+  \item La \textbf{Tasa Bruta de Natalidad(TBN)} es el cociente entre el número de nacimientos ocurridos durante un período determinado, 
+  generalmente un año calendario,y la población media del período.
+   \item	La  \textbf{Tasa Bruta de Mortalidad (TBM)}es el cociente entre el número de defunciones ocurridas durante un período determinado, 
+   generalmente un año calendario, y la población media del período.
+   \item La \textbf{Tasa de Crecimiento Vegetativo(TCV)} es la diferencia entre entre la Tasa Bruta de Natalidad 
+   y la Tasa Bruta de Mortalidad de un período determinado, generalmente un año calendario
+   \item  La \textbf{Tasa Global de Fecundidad(TGF)}es el número de hijos que en promedio tendría una mujer de
+   una cohorte hipotética de mujeres que durante su vida fértil tuvieran sus hijos de acuerdo 
+   a las tasas de fecundidad por edad del período en estudio y no estuvieran expuestas al
+   riesgo de mortalidad desde el nacimiento hasta el término de su período fértil.
+   \item La \textbf{Tasa de Mortalidad Infantil(TMI)} expresa el cociente entre el número de muertes de menores de un año acaecidas 
+   en la población de un área geográfica durante un período determinado, 
+   generalmente un año calendario, y los nacidos vivos en esa área durante el mismo período.
+   \item La \textbf{Matricula en ciclo primario común(Mat1ria)} reprensenta la cantidad de alumnos
+   que ingresan en primer año del ciclio primario.
 \end{enumerate}
 
 \section{Metodologías}
 %Descripción de funcionamiento de cada método a utilizar (Metodología de variables sintomáticas, Data Mining, etc.)
-\subsection{Técnicas }
-Para dominio del problema, particularmente debido al nivel de desagregación analizado-departamentos-
-se utilizarán las siguientes metodologías en el trabajo.\newline
-\textbf{Metodologías Tradicionales}\newline
-Metodología de variables sintomáticas (distribución por prorrateo; dist. Proporcional; método de tasas variables,
- correlación de razones, correlación de diferencias, correlación de tasas) (Álvarez,2001) [2].
- \newline El método más sencillo es la \textbf{distribución por prorrateo}, que se
-basa en el supuesto de que la distribución de la población en un área
-mayor se distribuya entre sus áreas menores en forma idéntica a la
-distribución de una variable sintomática. La población del área menor
-i en el momento t+n está expresada por:
-\begin{equation}
-  \underset{\textstyle \text{\footnotesize(i,t+n)}}{P}=\frac{\underset{\textstyle \text{\footnotesize(i,t+n)}}{S}}{\underset{\textstyle\text{\footnotesize(t+n)}}{S}} \times \underset{\textstyle \text{\footnotesize(t+n)}}{P}
-\end{equation}
-Donde:\newline
-t+n es el momento n años posteriores al último censo (momento t)\newline
-P (i,t+n) población del área menor i en el momento t+n;\newline
-P (t+n) estimación disponible de la población del área mayor en el momento t+n;\newline
-S (i, t+n) valor de la variable sintomática del área menor i en el momento t+n;\newline
-S (t+n) valor de la variable sintomática del área mayor en el momento t+n.\newline
-El método de \textbf{distribución proporcional} supone que la población varía durante un período en
- la misma proporción que lo hace la variable sintomática en el mismo período. La población del área
-menor i en el momento t+n se deduce de esta relación contemplando un factor de ajuste (Fa) para
-que la suma de las áreas menores coincida con el área mayor:
+\subsection{Técnica }
+En esta sección se detallarán las metodologías utilizadas para realziar predicciones del valor poblaciones de todos los 
+departamentos del AMBA para el Año 2022, basados en los 3 censos anteriores y, dependiendo del método, variables sintomáticas 
+ típicas del fenómeno demográfico que se incorporaran al dataset. Es importante destacar que ciertas metodologías tradicionales
+ para predicción poblacional no son susceptibles de ser utilizadas debido al nivel de agregación analizado (Departamento)\newline
+  
+ De los censos pobalcionales se obtuvieron las siguientes atributos o variables: 
+ \begin{enumerate}
+  \item CodigoDepto 
+  \item	Población
+  \item Varones
+  \item Mujeres
+  \item Viviendas Particulares Totales
+  \item Viviendas Colectivas Totales
+  \item índice de Masculinidad
+ \end{enumerate} 
 
-\begin{equation}
-  \underset{\textstyle \text{\footnotesize(i,t+n)}}{P}=\frac{\underset{\textstyle \text{\footnotesize(i,t+n)}}{S}}{\underset{\textstyle\text{\footnotesize(i,t)}}{S}}\times \underset{\textstyle \text{\footnotesize(i,t)}}{P}\times \underset{\textstyle \text{\footnotesize(a)}}{F}
-\end{equation}
-
-\begin{equation}
-  \underset{\textstyle \text{\footnotesize(a)}}{F}=\frac{\underset{\textstyle \text{\footnotesize(i,t+n)}}{P}}
-  {\frac{\underset{\textstyle\text{\footnotesize(i,t+n)}}{S}}{\underset{\textstyle\text{\footnotesize(i,t)}}{S}}
-  \times
-   \underset{\textstyle \text{\footnotesize(i,t)}}{P} }
-\end{equation}
-\newline
-Donde:\newline
-t es el momento del último censo;\newline
-t+n es el momento n años posterior al último censo;\newline
-P (i,t+n) población del área menor i en el momento t+n;\newline
-P (i,t) población del área menor i en el momento t ;\newline
-S (i,t) valor de la variable sintomática del área menor i en el momento t ;\newline
-S (i,t+n) valor de la variable sintomática del área menor i en el momento t+n;\newline
-F a factor de ajuste entre suma de áreas menores estimadas y área mayor.\newline
-\newline
-El método de las \textbf{tasas vitales de Bogue} consiste en estimar la población de áreas menores
-utilizando solamente datos de los registros vitales. Bogue (1950) tomó como supuesto la
-existencia de una relación inversa entre las variaciones anuales de las tasas de natalidad y de
-mortalidad de las áreas menores y que el desvío de las tasas propias en relación a las tasas del área
-mayor permanece constante a través del tiempo. La expresión del modelo es:
-\newline
-\begin{equation}
-  \underset{\textstyle \text{\footnotesize(i,t+n)}}{P}=a \times \frac{\underset{\textstyle \text{\footnotesize(i,t+n)}}{B}}
-{\underset{\textstyle\text{\footnotesize(i,t+n)}}{b}} + (1-a)\times
-\frac{\underset{\textstyle \text{\footnotesize(i,t+n)}}{D}}
-{\underset{\textstyle\text{\footnotesize(i,t+n)}}{d}}
-\end{equation}
-\newline
-Donde:\newline
-a es el coeficiente de ponderación entre las dos estimaciones;\newline
-b (i,t+n) = [ (B (i, t) / P (i, t)) / (B (•, t) / P (•, t)) ] * (B (•, t+n) / P (•, t+n))\newline
-d (i,t+n) = [ (D (i, t) / P (i, t)) / (D (•, t) / P (•, t)) ] * (D (•, t+n) / P (•, t+n))\newline
-B es la cantidad de nacidos vivos;\newline
-b es la tasa bruta de natalidad;\newline
-D es la cantidad de defunciones;\newline
-d es la tasa bruta de mortalidad.\newline
-
- ---------------------------EN DESARROLLO------------------------
- \newline
-
-
-
-
+\subsubsection{Variables Sintomáticas}
+En este caso para algunas metodologÍas se utilizan variables sintomÁticas como input en las
+ estimaciones de población a realizar. A saber:
+ \begin{enumerate}
+    \item \textbf{Tasa Bruta de Natalidad(TBN)}
+    \item	\textbf{Tasa Bruta de Mortalidad (TBM)}
+    \item \textbf{Tasa de Crecimiento Vegetativo(TCV)}
+    \item \textbf{Tasa Global de Fecundidad(TGF)}
+    \item \textbf{Tasa de Mortalidad Infantil(TMI)} 
+    \item \textbf{Matricula en ciclo primario común(Mat1ria)} 
+  \end{enumerate}
  
-% El método de correlación de razones se aplica asumiendo que la evolución de la población
-% está correlacionada con la variación de una o más variables sintomáticas. La correlación se estima
-% por medio de un modelo de regresión, en tanto que la variación se establece por la razón entre los
-% valores de una variable correspondientes a dos fechas. El modelo asume la siguiente forma:
-% Y (i,t) = a (0)+ a(1) * X1 (i,t) + ... + a(n) * Xn (i,t) + e(i)
-% Donde:
-% ( ,0) ( ,0)
-% ( , ) ( , )
-% ( , ) /
-% /
-% • •
-% =
-% P P
-% P P
-% Y
-% i
-% i t t
-% i t
-% ( ,0) ( ,0)
-% ( , ) ( , )
-% ( , ) /
-% /
-% • •
-% =
-% Sj Sj
-% Sj Sj
-% Xj
-% i
-% i t t
-% i t
-% 0 es el momento del penúltimo censo;
-% t es el momento del último censo;
-% Y(i,t) razón entre la proporción del área menor i en los momentos 0 y t;
-% Xj(i,t) razón entre la proporción de la variable sintomática j del área menor i en los
-% momentos 0 y t;
-% e(i) error de la estimación según el modelo.
-% Finalmente la población del área menor i puede ser estimada en el momento t+n , a partir de
-% la aplicación del modelo de regresión a las razones de variación de las variables sintomáticas entre
-% el momento t y t+n, es decir que:
-% ( , )
-% ( , )
-% ( , )
-% ( , ) ( , ) t n
-% t t
-% i
-% i t n i t n P
-% P P
-% P Y
-% • +
-% •
-% + = + × ×
-% Donde:
-% Y(i, t+n) razón de variación de la población del área menor i estimada para el período t, t+n
-% por el modelo de regresión.Estimación de la poblaciones en áreas menores mediante variables sintomáticas
-% 16
-% El método de correlación de diferencias es semejante al anterior. La diferencia estriba en
-% que la variación se establece por la diferencia entre los valores de una variable correspondientes a
-% dos fechas. El modelo asume la siguiente forma:
-% W (i,t) = a (0)+ a(1) * Z1 (i,t) + ... + a(n) * Zn (i,t) + e(i)
-% Donde:
-% W(i,t)= [ P(i,t) / P(•,t) ] - [ P(i,0) / P(•,0) ]
-% Zj(i,t)= [ Sj(i,t) / Sj(•,t) ] - [ Sj(i,0) / Sj(•,0) ]
-% W(i,t) diferencia entre la proporción del área menor i en los momentos 0 y t;
-% Zj(i,t) diferencia entre la proporción de la variable sintomática j del área menor i en los
-% momentos 0 y t;
-% e(i) error de la estimación según el modelo.
-% Finalmente la población del área menor i en el momento t+n será:
-% P(i,t+n)= [W(i,t+n) + ( P(i,t) / P(•,t) ) ] * P(•,t+n) ]
-% Donde:
-% W(i, t+n) diferencia de proporciones del área menor i estimada para el período t, t+n por el
-% modelo de regresión
-% El método de correlación de tasas es otra variante del modelo de correlación de razones.11
-% En este caso, se establece una aproximación exponencial del cambio y, en tal sentido, se toma el
-% logaritmo natural de cada razón y se lo divide por el tiempo transcurrido entre los censos tomados
-% como referencia . En estos casos, el modelo asume la siguiente forma:
-% Y* (i,t) = a (0)+ a(1) * X*1 (i,t) + ... + a(n) * X*n (i,t) + e(i)
-% Donde:
-% k
-% nY
-% Y ∗(i,t ) = 1 (i,t)
-% k
-% nXj
-% X ∗ j(i,t) = 1 (i,t)
-% k es el tiempo transcurrido entre las dos fechas de referencia.
-% 11 La descripción del método de correlación de tasas se basa en Chaves Esquivel (s/f).CEPAL - SERIE Población y desarrollo N° 13
-% 17
-% Finalmente la población del área menor i puede ser estimada en el momento t+n, a partir de
-% la aplicación del modelo de regresión a las tasas de variación de las variables sintomáticas entre el
-% momento t y t+n, es decir que:
-% [ ]
-% ( , )
-% ( , )
-% ( , ) ( , )
-% ( , ) t n
-% t t
-% Y i t n k i
-% i t n P
-% P P
-% P e
-% • +
-% •
-% + ∗
-% + = × ×
-% ∗
-% Donde:
-% e
-% [Y*(i, t+n) * k] tasa de variación exponencial de la proporción del área menor i estimada para el
-% período t, t+n por el modelo de regresión si hubiese transcurrido k años entre t y t+n.
-% Finalmente resta comentar que los tres últimos métodos, basados en correlaciones, pueden
-% ser refinados en la medida en que se utilicen variables complementarias para distinguir estratos de
-% áreas. De esta manera, se mejoran las estimaciones obtenidas por un modelo único para todas las
-% divisiones geográficas en cuestión
+A partir del relevamiento de datos públicos gubernamentales , de fuentes como el  Programa de Análisis Demográfico,INDEC [],  
+datos demográficos de INDEC[] e información del ministerio de educación [] se confeccionó 
+un compendio de estas variables para los años de interés.
+En el siguiente cuadro\ref{tab:TasasBA} puede observarse el valor de las mismas
+para el periodo analizado.\newline
  
+\begin{table}[htb] %%%%% Variables sintomáticas
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+  \hline
+  \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Jurisdiccion}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$Año$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TMI}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TGF}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TBN}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TBM}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TCV}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Mat1ria}} \\ \hline
+  BUENOS AIRES & 1980 & 28.4 & 3.0 & 22.1 & 8.1 & 14.0 &  \\
+  BUENOS AIRES & 1991 & 24.2 & 2.6 & 18.4 & 7.9 & 10.5 & 1752994.0 \\
+  BUENOS AIRES & 2001 & 15.0 & 2.3 & 16.9 & 8.2 & 8.7 & 1658221.0 \\
+  BUENOS AIRES & 2010 & 12.0 & 2.5 & 18.9 & 8.4 & 10.5 & 1667278.0 \\
+  BUENOS AIRES & 2022 & 7.9 & 1.89 & 9.7 & 8.8 & 0.899 & 1767473.0 \\
+  \hline
+  \end{tabular}
+  \caption{Variables Sintomáticas para cálculo de estimaciones.Provincia de Buenos Aires}
+  \label{tab:TasasBA}
+  \end{table}
+  \textbf{Metodologías Tradicionales}
+\subsection{Regresión Lineal}
+  En una primera aproximación se utilizó la regresión líneal. Esta técnica estadística se utiliza para 
+  entender la relación entre dos variables. Una de estas variables es conocida como la variable independiente (X),
+   y la otra es la variable dependiente (Y). La idea principal es encontrar una línea recta que mejor se ajuste a los datos. 
+  Esta línea recta se llama "línea de regresión" o "línea de mejor ajuste".
+  La regresión lineal busca minimizar la distancia vertical entre cada punto de datos y 
+  la línea de regresión. Esto significa que la línea de regresión pasa lo más cerca posible de todos los puntos de datos. \newline
+  En este caso se utilizó como variable independiente el \textbf{Año} del censo y como variable dependiente obviamente la \textbf{pobalción}.
+
+\subsection{Estimaciones INDEC}
+ Se considerará también las proyecciones realizadas por el INDEC que indican la “Población estimada al 1 de julio de
+ cada año calendario por sexo, según partido. Provincia de Buenos Aires. Años 2010-2025” INDEC, 2010 [3].\newline
+  Estas proyecciones''... se apoyan en el crecimiento intercensal que comprende la evolución en conjunto
+ de las tres variables básicas del análisis demográfico: la fecundidad, la mortalidad y la migración del período
+ 2001\-2010. Los resultados de las estimaciones departamentales de población son coherentes y consistentes
+ con las proyecciones de población nacionales Serie de análisis demográfico N 35 (INDEC, 2013a) y
+ provinciales vigentes (INDEC, 2013b)''[3].
+
 \textbf{Metodologías Data Mining}
-CART, ARIMA, decision tree regression and classification algoritms (Chawda, Rane, Giri, 2018) [6]. 
+
+\subsection{CART, Random Forest  y LightGBM}
+ Si bien en este caso los datos son dispersos ("sparse") , se aplicarán árboles de decisión simples, random forest y otros algoritmos de clasificación
+ tal cual lo expuesto en el artículo "Exploring New Models for Population Prediction in Detecting Demographic
+  Phase Change for Sparse Census Data" (Chawda, Rane, Giri, 2018) [6]. \newline
+  Los árboles de decisión son una técnica de aprendizaje automático y análisis de datos que se utiliza tanto para problemas de clasificación como de regresión. Su objetivo es tomar decisiones o
+  hacer predicciones basadas en una serie de preguntas o condiciones. Debido al sesgo habitual en los árboles individuales se analiza también
+  utilizando Random Forest. Es una técnica de aprendizaje automático que combina múltiples árboles de
+  decisión para mejorar la precisión y la robustez de las predicciones. Es un método de ensamble, lo 
+  que significa que construye varios modelos y combina sus resultados para obtener una predicción final.\newline
+  Por último se utilizaLightGBM es un framework de aprendizaje automático que utiliza el algoritmo de 
+  boosting para construir modelos predictivos. Boosting es una técnica de ensamble que crea un fuerte modelo 
+  predictivo a partir de una combinación de modelos más débiles, generalmente árboles de decisión. 
+  LightGBM es una implementación optimizada de este enfoque, diseñada para ser altamente eficiente y escalable.
+
+ 
 \subsection{Herramientas }
-Como herramientas se contemplan los lenguajes Python y SQL. Los datos se trabajarán en base de datos POSTGRES, para visualización geográfica se utilizará QGIS y OpenJump. En cuento al scripting se gestionará mediante Jupyter Notebooks. 
+Para el guardado y manipulación de los datos se va a trabajar con un base de datos POSTGRES (Local). 
+Se desarrollo justamente un proceso de ETL en Python y SQL mediante en primera crear todas las tablas necesarias, 
+para luego producir la ingesta ,transformar en caso de que sea necesario, de los diferentes inputs que van a componer el modelo de datos.	
+Como herramientas se contemplan los lenguajes Python y SQL. Los datos se trabajarán en base de datos POSTGRES,
+ para visualización geográfica se utilizará QGIS y OpenJump. En cuento al scripting se gestionará mediante Jupyter Notebooks.
 
-\section{Referencias bibliográficas}
 
-\begin{enumerate}
-  \item  Instituto Nacional de Estadística y Censos - INDEC. (2013). Proyecciones provinciales de población por sexo y grupo de edad 2010-2014. - Instituto Nacional de Estadística y Censos - INDEC, 2013. E-Book. (Vol. 1a ed.).
-  %\item Alvarez, G., United Nations. Economic Commission for Latin America and the Caribbean., & CELADE (Organization). División de Población. (2001). Estimación de población en áreas menores mediante variables sintomáticas : una aplicación para los departamentos de la República Argentina (1991 y 1996). Naciones Unidas, CEPAL/ECLAC.
-  \item  Instituto Nacional de Estadística y Censos - INDEC. (2015). Estimaciones de población por sexo, departamento y año calendario 2010-2025. (1a. ed.).
-  \item Gupta, Arindam , Gupta, Arindam , Gupta, Arindam  (2012).Exploring New Models for Population Prediction in Detecting Demographic Phase Change for Sparse Census Data
-  \item  Hoque, Nazrul(2012). Evaluation of small area population estimates produced by Housing Unit, Ratio-correlation, and Component Method II compared to 2000 Census counts. Canadian Studies in Population 39, No. 1–2,  pg. 91-108.
-  \item Chawda, Manan, Rane, Rutuja, Giri, Skrinanth(2018) 2nd International Conference on Inventive Communication and Computational Technologies (ICICCT) .Demographic Progress Analysis of Census Data Using Data Mining , pg 1894-1897
-  % \item \textbackslash{}.h{INDEC CENSO 2022- $[$Archivo de datos$]$ Recuperado de https://www.censo.gob.ar/index.php/datos_provisionales}
-  % \item \textbackslash{https://redatam.org/es}
-  % \item \textbackslash{https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2010A}
-  % \item \textbackslash{https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2001ARG}
-  % \item  \textbackslash{IGM  Capas SIG - Departamento $[Archivo de datos]$ Recuperado de /https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG}
- \end{enumerate}
- \section{DESARROLLO}
-
- \section{Obtención de datos fuente. Consolidación Dataset }
+\section{Obtención de datos fuente y Análisis exploratorio de datos }
  En primera instancia se busca recopilar los datos de los CENSOS poblacionales 
- correspondientes desde 1991 elaborados por el INDEC( Instituto Nacional de Estadísticas y Censos, Argentina). 
+ correspondientes desde 1991 elaborados por el INDEC(Instituto Nacional de Estadísticas y Censos, Argentina). 
   Se obtuvieron desde los repositorios web del INDEC los datos correspondientes a los censos de  1991, 2001, 2010 y 2022 [1][2].
    En general el INDEC dispone la información en formatos CSV o 
  bien archivos Microsoft Excel  de difícil procesado para su ingesta por parte de un  proceso de ETL. \newline
@@ -490,9 +390,12 @@ que requieren post-proceso.\newline
     \label{tab:DimDepto}
 \end{table}
 
-\subsection{Proyecciones INDEC 2010-2025  }
+\subsection{Proyecciones INDEC 2010-2025}
 Se incorpora también al conjunto de datos que se analizarán proyecciones realizadas por el INDEC [3] que indican la “Población estimada al 1 de julio de
- cada año calendario por sexo, según partido. Provincia de Buenos Aires. Años 2010-2025”. Las mismas se utilizarán para comparar los resultados de los censos, acompañadas De
+ cada año calendario por sexo, según partido. Provincia de Buenos Aires. Años 2010-2025”.
+ Dichas estimaciones se apoyan en el crecimiento intercensal que comprende la evolución en conjunto
+ de las tres variables básicas del análisis demográfico: la fecundidad, la mortalidad y la migración del período
+ 2001-2010[3].  Las mismas se utilizarán para comparar los resultados de los censos, acompañadas De
  proyecciones realizadas por otros métodos.\newline
  La  descripción de este conjunto  puede verse en el  cuadro\ref{tab:ProyeccSummary},mientras el cuadro\ref{tab:proyecHead} muestra la estructura típica del 
  dataset.EN forma gráfica se dividen los departamentos según la población inicial para el año 2010. Se gráfica por un lado aquellos
@@ -585,23 +488,10 @@ Con el objetivo de enriquecer el dataset se incorpora una tabla con los polígon
     \label{tab:geo.depto}
 \end{table}
 
-En base
-
-\subsection{Herramientas }
-Para el guardado y manipulación de los datos se va a trabajar con un base de datos POSTGRES (Local). 
-Se desarrollo justamente un proceso de ETL en Python y SQL mediante en primera crear todas las tablas necesarias, 
-para luego producir la ingesta ,transformar en caso de que sea necesario, de los diferentes inputs que van a componer el modelo de datos.	
-
-
-
-
-\section{Metodologías Aplicadas}
-
-..---- TODAVIA SIN DESARROLLO.---------------
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{ Análisis exploratorio de datos}
+
 \subsection{Población}
 
 Con sustento en la base de datos "AMBA" ( POSTGRES/POSTGIS) se analizarán los distintos datos recopilados según nivel de agregación.
@@ -862,7 +752,7 @@ En la figura \ref{fig:CVOutliersPoblacion} se observa el resultado .Se destaca e
 tanto negativos como positivos.A saber : Vincente López, Morón, Tres de Febrero, Avellaneda ,La Matanza ,
 Esteban Echeverría, General San Martín.  
 \newline 
-Cabe recordar en este instancia que los partidos de Esteban Echeverría ,
+Cabe recordar en este instancia que los partidos de Esteban Echeverría,
  Florencio Varela y Morón sufrieron modificaciones administrativa en el período 1991-2001.
  En la figura \ref{fig:CVoutCurvasMedia} así como en la figura\ref{fig:CVoutCurvasAlta} puede observarse la curvas poblacionales
  de los departamentos destacados.\newline
@@ -1020,21 +910,221 @@ Particularmente el máximo de la muestra presenta un descenso de 5 puntos porcen
 \label{fig:IndMAsvLinea}
 \end{figure}
 
+\section{ Compartiva de los Modelos de Predicción}
+ El enfoque en este caso fue el de tomar los censos 1991,2001 y 2010 sumado a las variables sintomáticas antes descriptas
+ para  ajustar y entrenar los modelos y luego predecir la población total de cada departmento del AMBA para el Año 2022.
+ Al comparar con los resultados publicados por INDEC para el censo 2022 [7**] se determinó la precisión de cada métodología aplicada.\newline 
+ Muchas de estas herramientas tiene problemas con los valores nulos o faltantes. Es por esto que los departamentos que no existían en 1991, demandaron 
+un tratamiento  especial.
+\subsection{Variables Censales}
+Respecto a las variables censales podemos decir que presentan una correlación lineal directa muy imporante y
+ no aporta variabilidad.Por este motivo no son atributos sginificativos para los modelos propuestos. 
+ Para su análisis se utlizó la matriz de correlación, la misma puede verse en la figura\ref{fig:MatCorr} \newline 
+ \begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png}}
+  \caption{Matriz de correlación . Variables Censales}
+  \label{fig:MatCorr}
+\end{figure}
 
-%  MAIN SECTIONS
+\subsection{Errores típicos}
+ Para la determinar la precisión y realizar la comparativa entre los modelos aplicados se recurrió a los siguientes errores típicos.\newline
+El Error Cuadrático Medio (Mean Squared Error, MSE) es una medida de la calidad de un estimador.
+Se calcula promediando el cuadrado de los errores (diferencias entre los valores predichos y los valores reales).\newline
+
+  \[
+    \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+  \]
 
 
-%  II.	Descripción de funcionamiento de cada método a utilizar (Metodología de variables sintomáticas, Data Mining, etc.)
-% III.	Implementación del ETL para extracción y transformación de datos
-% IV.	EDA- Análisis exploratorio y descriptivo de las variables
+ Se calculó también la Raíz del Error Cuadrático Medio (Root Mean Squared Error, RMSE) es la raíz cuadrada del MSE. 
+Proporciona una medida de la magnitud promedio del error en las mismas unidades que los valores predichos.\newline   
+\[
+\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
+\]
+ 
+Asimismo se determinó el Error Porcentual Absoluto Medio (Mean Absolute Percentage Error, MAPE) es 
+una medida de precisión que expresa el error como un porcentaje. 
+Se calcula promediando el valor absoluto de los errores porcentuales.
+\[
+\text{MAPE} = \frac{100\%}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right|
+\]
 
-% V.	Comparación entre los modelos 
-% VI.	Conclusiones
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Subset de Datos para Entrenamiento}
+ Como se mencionó anteriormente se trabajó con los los censos de los años 1991 , 2001 y 2010. A este conjunto se le agregó el valor
+ de las variables sintomáticas para la Jurisdicción provincial- Provincia de Buenos Aires para dichos años.
+ Se toma un enfoque planteado por Alvarez en División de Población (2001)\cite{alvarez2001},
+entendinedo que el  comportamiento de estas variables puede ayudar a explicar fenómenos a nivel departamental.\newline
+ Un esquema del dataset utlizado como input de los modelos puede verse en el cuadro\ref{tab:baseModelos}.
 
+
+ % Place the table on a landscape page
+\afterpage{
+  
+    \begin{landscape} 
+     \begin{table}[htb]
+     \centering
+      \footnotesize
+      \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Departamento}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$cod_depto$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{ano}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{pob}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{var}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{muj}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{vivpart}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{vivtotal}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{sup}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$ind_masc$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$dens_pob$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TMI}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TGF}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TBN}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TBM}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{TCV}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Mat1ria}} \\ \hline
+        Almirante Brown & 6028 & 1991 & 450698.0 & 222042.0 & 228656.0 & nan & nan & 157.87 & 97.1 & 2854.87 & 24.2 & 2.6 & 18.4 & 7.9 & 10.5 & 1752994.0 \\
+        Almirante Brown & 6028 & 2001 & 515556.0 & 252454.0 & 263102.0 & 143543.0 & 88.0 & 157.87 & 96.0 & 3265.7 & 15.0 & 2.3 & 16.9 & 8.2 & 8.7 & 1658221.0 \\
+        Almirante Brown & 6028 & 2010 & 552902.0 & 270247.0 & 282655.0 & 156218.0 & 78.0 & 157.87 & 95.6 & 3502.26 & 12.0 & 2.5 & 18.9 & 8.4 & 10.5 & 1667278.0 \\
+        Avellaneda & 6035 & 1991 & 344991.0 & 164243.0 & 180748.0 & nan & nan & 68.54 & 90.9 & 5033.43 & 24.2 & 2.6 & 18.4 & 7.9 & 10.5 & 1752994.0 \\
+        Avellaneda & 6035 & 2001 & 328980.0 & 155450.0 & 173530.0 & 117200.0 & 59.0 & 68.54 & 89.6 & 4799.82 & 15.0 & 2.3 & 16.9 & 8.2 & 8.7 & 1658221.0 \\
+        Avellaneda & 6035 & 2010 & 342677.0 & 162264.0 & 180413.0 & 121307.0 & 68.0 & 68.54 & 89.9 & 4999.66 & 12.0 & 2.5 & 18.9 & 8.4 & 10.5 & 1667278.0 \\
+        Berazategui & 6091 & 1991 & 244929.0 & 120870.0 & 124059.0 & nan & nan & 268.91 & 97.4 & 910.82 & 24.2 & 2.6 & 18.4 & 7.9 & 10.5 & 1752994.0 \\
+        Berazategui & 6091 & 2001 & 287913.0 & 141163.0 & 146750.0 & 81511.0 & 38.0 & 268.91 & 96.2 & 1070.67 & 15.0 & 2.3 & 16.9 & 8.2 & 8.7 & 1658221.0 \\
+        Berazategui & 6091 & 2010 & 324244.0 & 158608.0 & 165636.0 & 96029.0 & 37.0 & 268.91 & 95.8 & 1205.77 & 12.0 & 2.5 & 18.9 & 8.4 & 10.5 & 1667278.0 \\
+        Esteban Echeverría & 6260 & 1991 & 275793.0 & 136784.0 & 139009.0 & nan & nan & 148.12 & 98.4 & 1861.96 & 24.2 & 2.6 & 18.4 & 7.9 & 10.5 & 1752994.0 \\
+        Esteban Echeverría & 6260 & 2001 & 243974.0 & 120110.0 & 123864.0 & 70535.0 & 26.0 & 148.12 & 97.0 & 1647.14 & 15.0 & 2.3 & 16.9 & 8.2 & 8.7 & 1658221.0 \\
+        Esteban Echeverría & 6260 & 2010 & 300959.0 & 147980.0 & 152979.0 & 88164.0 & 26.0 & 148.12 & 96.7 & 2031.86 & 12.0 & 2.5 & 18.9 & 8.4 & 10.5 & 1667278.0 \\
+        \hline
+      \end{tabular}
+      \caption{Subset de datos input.Primeras 15 filas. Censos 1991, 2001, 2010 enriquecidos con las variables sintomáticas}
+    \label{tab:baseModelos}
+    \end{table}
+    \end{landscape}
+    
+ }
+
+ \subsection{Predicciones Población año 2022}
+  
+ En base al subset de datos predefinido, se entrenoaron los distintos modelos para luego predecir el valor de población total en cada
+ departamento para el año 2022. Las predicciones realizadas corresponde a  Regresión Lineal, árbol de decisión (CART), Random Forest , LightGMB
+ y también se analizan las estimaciones realizadas por el INDEC en el año 2010. Para cada estimación se obtuvieron los errores 
+ típicos. Particularmente para la comparativa de las los modelos se trabaja con el 
+ Error Porcentual Absoluto Medio (Mean Absolute Percentage Error, MAPE).\newline
+
+Los resultados obtenidos implican las metodologías tradicionales aproximan mejor este tipo de datos dispersos ''sparse'' poblacionales.Tanto la regresión Lineal ,
+como las proyecciones realizadas por el INDEC presentan mejor precisión- menor error- y una menor desviación estándar. Este compartamiento se puede
+obsersar en el la figura\ref{fig:BoxPlotModelos}, 
+así como el detalle de los estadísticos correspondientes se muestra en el cuadro\ref{tab:EstadModelo}. Las algoritmos de data mining presenta dificultades debido a 
+las características particulares de la información censal, el hecho de estar trabajando sólo con la información de 3(tres) Censos Nacionales.Esto sumado al hecho de la granularidad
+analizada en este caso, nivel departamental, lo que hace dificil enriquecer el dataset con variables sintomáticas a este nivel y se debe recurrurir a información agregada
+a nivel Provincial. Estos modelos presentan valores de error notablemente mayores y una amplia dispesión de resultados.\newline
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png}}
+  \caption{Box plot del Error Porcentual Absoluto Medio para cada modelo, sobre la predicción población año 2022}
+  \label{fig:BoxPlotModelos}
+\end{figure}
+
+\begin{table}[htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \hline
+  \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Method}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Q1}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Median}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Q3}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{IQR}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Lower Bound}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Upper Bound}} \\ \hline
+  Linear Regression & 3.2 & 4.5 & 6.3 & 3.1 & -1.4 & 11.0 \\
+  Regression Tree & 6.2 & 10.5 & 17.6 & 11.5 & -11.1 & 34.9 \\
+  Random Forest & 9.1 & 14.1 & 18.2 & 9.1 & -4.5 & 31.8 \\
+  LightGBM & 9.4 & 15.5 & 24.7 & 15.3 & -13.5 & 47.6 \\
+  INDEC & 3.3 & 5.1 & 6.6 & 3.3 & -1.6 & 11.6 \\
+  \hline
+  \end{tabular}
+  \caption{Estadísticos MAPE por Modelo}
+  \label{tab:EstadModelo}
+  \end{table}
+  
+
+Los outliers para estos modelos se resumen en el cuadro\ref{tab:DeptOutliers}. Si se analizan los modelos con mejor precisión, en Regresión Lineal tanto
+Esteban Echeverría(MAPE:11.2\%) como la Matanza(MAPE:41.6\%) son outliers, donde la predicción estuvo muy alejada del valor
+poblacional del CENSO 2022. Para el caso de las proyecciones según INDEC, aparecen también Esteban Echeverría (MAPE:13.1\%) 
+y la Matanza (MAPE:29.2\%) como outiliers.  El caso de Esteban Echeverría tiene que ver con la cesión de territorio y cambios administrativos
+desde el año 1991 al 2001. Esto implicó que su población descienda entre 1991  y 2001 un -11,5\% mientras que
+ entre 2001 y 2010 creció un 23.3\%.
+La Matanza presenta entonces singularidades y se comporta distinto de los departamentos aledaños.\newline
+
+
+\begin{table}[htb]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{Departamento}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$MAPE_LR$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$MAPE_RT$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$MAPE_RF$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$MAPE_LGB$}} & \textbf{\cellcolor[rgb]{0,0.231,0.427}\textcolor{white}{$MAPE_Pred_INDEC$}} \\ \hline
+  Esteban Echeverría & \textbf{11.2} & 28.0 & 17.8 & 19.3 & \textbf{13.1} \\
+  Ezeiza & 10.0 & \textbf{41.6} &   &   & \textbf{12.8} \\
+  La Matanza & \textbf{34.4} & 3.4 & 21.7 & 24.6 & \textbf{29.2} \\
+  Moreno & 4.5 & 21.2 & \textbf{32.2} & 35.0 & 2.8 \\
+  \hline
+  \end{tabular}
+  \caption{Outliers por modelo. MAPE .Proyecciones Población 2022}
+  \label{tab:DeptOutliers}
+\end{table}
+  
+\subsection{Análisis de Sigularidades. Curva Poblacional La Matanza}
+
+Al analizar la curva poblacional, figura\ref{fig:LMFinalChart} de La Matanza se obervan cambios significativos en el ratio de crecimiento intercensal, a lo largo de los distintos censos.
+Si se observa el año 2001 , el ratio intercensal es de 11.9\% que se ubica un 75\% por encima del crecimento(6.8\%) promedio para los municipios del AMBA.
+En el año 2010 se observa un ratio de 41.5\% que reprensenta un 250\% por encima del crecimiento promedio( 11.8\%).Esto representa un salto imporante, siendo el municipio que más crecimento
+en este periodo. Mientras que para el año 2022 se observa un ratio muy menor del orden de 3.5\% , un 70\% por debajo del crecimiento promedio (10.6\%).\newline
+Esto implica que La Matanza es un de los departamento con mayor desviación estandar y coeficiente de variación en
+ ratios de creciemiento por departamento,  tal como se describió en apartados anteriores. El creciemiento promedio de los departamentos del AMBA
+ para el periodo 1991 a 2010 es de 9,9\% , mientras que La Matanza en el mismo periodo creció un 26,7\% siendo uno de los municipios con mayor crecimiento pobalciona.
+ Obviamente el promedio cae al incorporar el año 2022, dando lugar a que La Matanza en toda la serie se acerca al crecimiento promedio de otros municipios.
+Seguramente estas sigulardidades hayan dificultado la predicción del valor poblacional para el deparamento con todas la metodologías aplicadas,
+ incluyendo aquellas que pudieron resultar mayormente efectivas en la vasta mayoría de los casos.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{{C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png}}
+  \caption{Curva Poblacional La Matanza.}
+  \label{fig:LMFinalChart}
+\end{figure} 
+
+
+ \section{Conclusión} 
+En resumen, se indica que para la predicción de valores de población a nivel departamentales
+ se destacan las metodologías tradicionales, como regresión lineal o bien metodologías que se apoyan en el crecimiento intercensal que comprende la evolución en conjunto
+ de las tres variables básicas del análisis demográfico: la fecundidad, la mortalidad y la migración.\newline
+  Sin embargo debe
+  considerarse que la elaboración de proyecciones de población de áreas menores resulta compleja debido a la imposibilidad de aplicar un método estrictamente demográfico, tal como el método de los componentes, que requiere la estimación y proyección independiente de cada una de las variables del crecimiento
+ de la población (fecundidad, mortalidad y migraciones). A este nivel de desagregación, los hechos vitales
+ presentan fluctuaciones anuales más acentuadas cuanto menor es el número de población y consecuentemente 
+ de nacimientos y defunciones, que pueden afectar las estimaciones de la fecundidad y la mortalidad. Por otra parte estos datos suelen difundirse al público en un nivel de Provicia y no existen datos por Departamento.
+ Asimismo, se hace casi imposible la determinación de la migración interna, que suele ser un
+ elemento muy importante del crecimiento de dichas áreas. Esto se debe a la dificultad de obtener estimaciones 
+ de saldos migratorios consistentes a nivel departamental y a la complejidad para su proyección futura,
+ por tratarse de un factor estrechamente asociado a las condiciones económicas y sociales del momento.\newline
+Por otro lado puede decirse que las metodologías de data mining no han producido en este caso resultados precisos.
+ Prensentan dificultades debido a las características particulares de la información censal,
+ el hecho de estar trabajando sólo con la información de 3(tres) Censos Nacionales.Esto sumado al hecho de la granularidad
+analizada en este caso, nivel departamental, lo que hace dificil enriquecer el dataset con variables sintomáticas a este nivel y se debe recurrurir a información agregada
+a nivel Provincial. Estos modelos presentan valores de error notablemente mayores y una amplia dispesión de resultados.\newline
+
+Ciertamente si bien en la generalidad de los casos es posible estimar un valor población futuro con un grado de confianza aceptable,
+ algunos departamentos presentan comportamiento singulares en sus curvas poblacionales que hace imposible su predicción. Las razones de estas singularidades
+ escapan al alcance del presente trabajo , bien pueden deberse a causales del  complejo fenómeno demográfico así
+  como también errores censales que pudiesen ocurrir.
+
+
+
+\section{Referencias bibliográficas}
+
+\begin{enumerate}
+  \item  Instituto Nacional de Estadística y Censos \- INDEC.\(2013\). Proyecciones provinciales de población por sexo y grupo de edad 2010-2014. - Instituto Nacional de Estadística y Censos - INDEC, 2013. E-Book. (Vol. 1a ed.).
+  %\item Alvarez, G., United Nations. Economic Commission for Latin America and the Caribbean., & CELADE (Organization).
+  % División de Población. (2001). Estimación de población en áreas menores mediante variables sintomáticas : una aplicación para los
+  % departamentos de la República Argentina (1991 y 1996). Naciones Unidas, CEPAL/ECLAC.
+  \item  Instituto Nacional de Estadística y Censos - INDEC. (2015). Estimaciones de población por sexo, departamento y año calendario 2010-2025. (1a. ed.).
+  \item Gupta, Arindam , Gupta, Arindam , Gupta, Arindam  (2012).Exploring New Models for Population Prediction in Detecting Demographic Phase Change for Sparse Census Data
+  \item  Hoque, Nazrul(2012). Evaluation of small area population estimates produced by Housing Unit, Ratio-correlation, and Component Method II compared to 2000 Census counts. Canadian Studies in Population 39, No. 1–2,  pg. 91-108.
+  \item Chawda, Manan, Rane, Rutuja, Giri, Skrinanth(2018) 2nd International Conference on Inventive Communication and Computational Technologies (ICICCT) .Demographic Progress Analysis of Census Data Using Data Mining , pg 1894-1897
+  % \item \textbackslash{}.h{INDEC CENSO 2022- $[$Archivo de datos$]$ Recuperado de https://www.censo.gob.ar/index.php/datos_provisionales}
+  % \item \textbackslash{https://redatam.org/es}
+  % \item \textbackslash{https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2010A}
+  % \item \textbackslash{https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2001ARG}
+  % \item  \textbackslash{IGM  Capas SIG - Departamento $[Archivo de datos]$ Recuperado de /https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG}
+ %% FUENTES
+  \item []Fuente: INDEC. Programa de Análisis Demográfico. Selección de datos tomada de www.indec.gob.ar., Recurso WEB Fecha: 2024-03-29
+  %REFERENCIAS ADCICIONALES
+  \item []https://data.educacion.gob.ar/reporte-matricula.php
+\end{enumerate}
 
 
 %%%%%%%%%%%%%%%%%%% ANEEEEXOOOOOOOOOOOOOOOOOOOOOOOO%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
 \section{ANEXO}
  \subsection{Diccionario de Departamentos } 
 Debido a las inconsistencias y falta de normalización de los archivos CSV que provee el INDEC,
@@ -1066,7 +1156,8 @@ De esta forma en la ingesta (ETL) se buscaba el código de departamento correspo
   \end{table}
 
  \subsection{Diagrama de entidad relación }
-
+  A modo descrptivo se indica el diagrama de entidad realación de la base de datos confeccionada
+  para este trabajo. Figura \ref{fig:DER}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{img/DER.jpg}
@@ -1254,5 +1345,40 @@ De esta forma en la ingesta (ETL) se buscaba el código de departamento correspo
       FROM 'C:/Temp/proy_1025.CSV'
       WITH (FORMAT csv, HEADER true, DELIMITER ';', QUOTE '"', ESCAPE '''', ENCODING 'UTF8');
     \end{lstlisting}
+
+
+% %% DEFINICIONES
+%     La Esperanza de Vida al Nacer es el promedio de años que se espera que viva un recién nacido de 
+%     acuerdo con la
+%      probabilidad de sobrevivencia prevaleciente en el período del nacimiento.
+
+% %%%%
+% La Tasa Bruta de Natalidad es el cociente entre el número de nacimientos ocurridos durante un período determinado, 
+% generalmente un año calendario, 
+% y la población media del período.
+% La Tasa Bruta de Mortalidad es el cociente entre el número de defunciones ocurridas durante un período determinado, 
+% generalmente un año calendario, y la población media del período.
+% La Tasa de Crecimiento Vegetativo es la diferencia entre entre la Tasa Bruta de Natalidad 
+% y la Tasa Bruta de Mortalidad de un período determinado, generalmente un año calendario
+
+
+
+%      %%
+%      La Tasa Global de Fecundidad es el número de hijos que en promedio tendría una mujer de
+%       una cohorte hipotética de mujeres que durante su vida fértil tuvieran sus hijos de acuerdo 
+%             a las tasas de fecundidad por edad del período en estudio y no estuvieran expuestas al
+%       riesgo de mortalidad desde el nacimiento hasta el término de su período fértil.
+% %%%
+% La Tasa de Mortalidad Infantil expresa el cociente entre el número de muertes de menores de un año acaecidas 
+% en la población de un área geográfica durante un período determinado, 
+% generalmente un año calendario, y los nacidos vivos en esa área durante el mismo período.
+
+% %%%
+% Índice de envejecimiento de la población: es el cociente entre la población 65 años y más y la población 
+% de menores de 15 años de edad.
+
+% %%%
+% El porcentaje de población extranjera es el cociente entre la cantidad de 
+% habitantes nacidos en el extranjero y el total de la población multiplicado por 100.
 
 \end{document}
