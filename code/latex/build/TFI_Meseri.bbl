@@ -1,0 +1,50 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{INDECProyecciones1025}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9ad039d7bd00e455252df29fcc6a1179}{%
+           family={Estadística\bibnamedelimb y\bibnamedelimb Censos\bibnamedelimb -\bibnamedelima INDEC},
+           familyi={E\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Instituto\bibnamedelima Nacional},
+           giveni={I\bibinitperiod\bibinitdelim N\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ad039d7bd00e455252df29fcc6a1179}
+      \strng{fullhash}{9ad039d7bd00e455252df29fcc6a1179}
+      \strng{bibnamehash}{9ad039d7bd00e455252df29fcc6a1179}
+      \strng{authorbibnamehash}{9ad039d7bd00e455252df29fcc6a1179}
+      \strng{authornamehash}{9ad039d7bd00e455252df29fcc6a1179}
+      \strng{authorfullhash}{9ad039d7bd00e455252df29fcc6a1179}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1 ed.}
+      \field{title}{Estimaciones de población por sexo, departamento y año calendario 2010-2025.}
+      \field{year}{2015}
+    \endentry
+  \enddatalist
+  \missing{alvarez2001}
+\endrefsection
+\endinput
+

@@ -27,6 +27,9 @@
 \usepackage{pdflscape}
 \usepackage{afterpage}
 \usepackage{listings}
+\usepackage{biblatex}
+\usepackage{csquotes}
+\addbibresource{ref.bib}
 \usepackage[T1]{fontenc} % Required for accented characters
 \lstset{
     language=SQL,
@@ -86,12 +89,21 @@
 \begin{document}
     \maketitle
     Fernando Meseri
-\section{ Introducción}
-La información estadística que brindan las proyecciones de población es un insumo principal en la implementación de políticas estatales.  Las proyecciones poblaciones es común encontrarlas a nivel País o Provincia, pero resulta particularmente importante poder contar con dichas proyecciones con un mayor nivel de desagregación, municipio/departamento.
-En este caso se analiza en particular los municipios del AMBA, Argentina para el período 1991-2022. Las proyecciones del Instituto Nacional de estadísticas y Censos (INDEC) han estimado la población dichos municipios. El valor arrojado para el CENSO 2022 en el caso de La Matanza presenta una desviación importante respecto al error promedio encontrado entre las proyecciones y el valor relevando en el CENSO 2022. A partir del análisis de datos censales y variables indirectas se analiza las curvas poblacionales, el error en las proyecciones INDEC respecto a lo arrojado en el CENSO 2022 así como el caso puntual de La Matanza.
+\section{Introducción}
+La información estadística que brindan las proyecciones de población representa un insumo vital en la implementación de 
+políticas estatales. Dichas proyecciones es común encontrarlas a nivel País o Provincia, 
+pero resulta particularmente importante poder contar con dichas proyecciones con un mayor nivel de desagregación(Municipios).
+En el presente trabajo se analiza en particular los municipios de la zona AMBA(Argentina) para el período 1991-2022. 
+Las proyecciones del Instituto Nacional de estadísticas y Censos (INDEC) han estimado la población dichos municipios\cite{INDECProyecciones1025}.
+ El valor arrojado para el CENSO 2022 en el caso de La Matanza presenta una desviación importante respecto
+  al error promedio encontrado entre las proyecciones y el valor relevando en el CENSO 2022. 
+  A partir del análisis de datos censales y variables indirectas se analiza las curvas poblacionales,
+  el error en las proyecciones INDEC respecto a lo arrojado en el CENSO 2022 así como el caso puntual de La Matanza.
 \section{Revisión bibliográfica}
 \subsection{Marco Conceptual}
-  La información estadística que brindan las proyecciones de población constituye una herramienta fundamental para la planificación de políticas públicas de corto, mediano y largo plazo. Permite estimar demanda potencial de bienes y servicios en distintas áreas como Salud, Educación, entre otras - Instituto Nacional de Estadísticas y Censos (INDEC,2013) [1]. El estado puede de esta forma determinar los recursos presupuestarios necesarios para satisfacer estas demandas. En la provincia de Buenos Aires ciertos aspectos del presupuesto son asignados en base a la población de cada municipio. Es necesario entonces contar con la información 
+  La información estadística que brindan las proyecciones de población en general es utilizada en  la planificación de políticas públicas de corto, mediano y largo plazo.
+   Permite estimar demanda potencial de bienes y servicios en distintas áreas como Salud, Educación, entre otras - Instituto Nacional de Estadísticas y Censos (INDEC,2013) [1]. 
+   El estado puede de esta forma determinar los recursos presupuestarios necesarios para satisfacer estas demandas. En la provincia de Buenos Aires ciertos aspectos del presupuesto son asignados en base a la población de cada municipio. Es necesario entonces contar con la información 
   en un alto nivel de desagregación espacial(municipios).
   \subsection{Marco Teórico}
   La elaboración de proyecciones de población es una tarea compleja que debe ser realizada a través de un análisis exhaustivo que permita considerar los censos anteriores como también registros vitales y estimaciones de migración. (INDEC,2013) [1]. En general se ha utilizado en método de las componentes para elaborar dichas proyecciones. Mas esta metodología no ha podido ser replicada al nivel de las jurisdicciones más elementales, departamentos, por cuanto la información no es suficientemente confiable y la inestabilidad de la migración interna no admite formulación de hipótesis a mediano plazo. (Álvarez,2001) [2]. Una forma de realizar estas predicciones ha sido mediante métodos matemáticos de extrapolación en base a la información censal previa. (Álvarez,2001) [2].
@@ -1100,31 +1112,10 @@ Ciertamente si bien en la generalidad de los casos es posible estimar un valor p
 
 
 
-\section{Referencias bibliográficas}
+\section{Bibliografía}
+\printbibliography%
 
-\begin{enumerate}
-  \item  Instituto Nacional de Estadística y Censos \- INDEC.\(2013\). Proyecciones provinciales de población por sexo y grupo de edad 2010-2014. - Instituto Nacional de Estadística y Censos - INDEC, 2013. E-Book. (Vol. 1a ed.).
-  %\item Alvarez, G., United Nations. Economic Commission for Latin America and the Caribbean., & CELADE (Organization).
-  % División de Población. (2001). Estimación de población en áreas menores mediante variables sintomáticas : una aplicación para los
-  % departamentos de la República Argentina (1991 y 1996). Naciones Unidas, CEPAL/ECLAC.
-  \item  Instituto Nacional de Estadística y Censos - INDEC. (2015). Estimaciones de población por sexo, departamento y año calendario 2010-2025. (1a. ed.).
-  \item Gupta, Arindam , Gupta, Arindam , Gupta, Arindam  (2012).Exploring New Models for Population Prediction in Detecting Demographic Phase Change for Sparse Census Data
-  \item  Hoque, Nazrul(2012). Evaluation of small area population estimates produced by Housing Unit, Ratio-correlation, and Component Method II compared to 2000 Census counts. Canadian Studies in Population 39, No. 1–2,  pg. 91-108.
-  \item Chawda, Manan, Rane, Rutuja, Giri, Skrinanth(2018) 2nd International Conference on Inventive Communication and Computational Technologies (ICICCT) .Demographic Progress Analysis of Census Data Using Data Mining , pg 1894-1897
-  % \item \textbackslash{}.h{INDEC CENSO 2022- $[$Archivo de datos$]$ Recuperado de https://www.censo.gob.ar/index.php/datos_provisionales}
-  % \item \textbackslash{https://redatam.org/es}
-  % \item \textbackslash{https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2010A}
-  % \item \textbackslash{https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2001ARG}
-  % \item  \textbackslash{IGM  Capas SIG - Departamento $[Archivo de datos]$ Recuperado de /https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG}
- %% FUENTES
-  \item []Fuente: INDEC. Programa de Análisis Demográfico. Selección de datos tomada de www.indec.gob.ar., Recurso WEB Fecha: 2024-03-29
-  %REFERENCIAS ADCICIONALES
-  \item []https://data.educacion.gob.ar/reporte-matricula.php
-\end{enumerate}
-
-
-%%%%%%%%%%%%%%%%%%% ANEEEEXOOOOOOOOOOOOOOOOOOOOOOOO%%%%%%%%%%%%%%%%%%%%%%%%%%5
-
+%%%%%%%%%%%%%%%%% ANEEEEXOOOOOOOOOOOOOOOOOOOOOOOO%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \section{ANEXO}
  \subsection{Diccionario de Departamentos } 
 Debido a las inconsistencias y falta de normalización de los archivos CSV que provee el INDEC,
