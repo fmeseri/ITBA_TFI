@@ -385,26 +385,20 @@ INPUT c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.bbl
 INPUT c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.bbl
 INPUT c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.bbl
 INPUT c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.bbl
+INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\logo-itba-300x206.jpg
+INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\logo-itba-300x206.jpg
+INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\logo-itba-300x206.jpg
+INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\logo-itba-300x206.jpg
+OUTPUT c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.pdf
+INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\logo-itba-300x206.jpg
+INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\logo-itba-300x206.jpg
+INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\logo-itba-300x206.jpg
+INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm2488.tfm
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx2488.tfm
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\itba_logo-2000x664.png
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\itba_logo-2000x664.png
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\itba_logo-2000x664.png
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\itba_logo-2000x664.png
-OUTPUT c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.pdf
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\itba_logo-2000x664.png
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\itba_logo-2000x664.png
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\itba_logo-2000x664.png
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\EspCsDatos ITBA.JPG
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\EspCsDatos ITBA.JPG
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\EspCsDatos ITBA.JPG
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\EspCsDatos ITBA.JPG
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\EspCsDatos ITBA.JPG
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\EspCsDatos ITBA.JPG
-INPUT C:\Users\Fer\ITBA_TFI\code\latex\img\EspCsDatos ITBA.JPG
-INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
-INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
+INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcti1200.tfm
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -685,12 +679,14 @@ INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
-INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
-INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1200.pk
+INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcti1200.pk
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
 INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
+INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\Fer\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Fer\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb

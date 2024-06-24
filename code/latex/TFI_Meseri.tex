@@ -28,6 +28,7 @@
 \usepackage{afterpage}
 \usepackage{listings}
 \usepackage{csquotes}
+\usepackage{tikz} % For drawing the border 
 \usepackage[backend=biber, style=numeric]{biblatex}
 % Redefine customcite command for the desired format
 \DeclareCiteCommand{\customcite}
@@ -101,19 +102,38 @@
 %%% COVER PAGE
 % Create the title page
 \begin{titlepage}
-  \centering
-  \vspace*{4cm}
-  {\Huge \textbf{Singularidades en Curvas Poblacionales para el AMBA 1991-2022}\\[1em]
-   \Large Fernando Meseri\\[1em]
-   \today}
-  \vfill
-  \includegraphics[width=0.5\textwidth]{C:/Users/Fer/ITBA_TFI/code/latex/img/itba_logo-2000x664.png} % Add your logo or any image
-  \includegraphics[width=0.5\textwidth]{C:/Users/Fer/ITBA_TFI/code/latex/img/EspCsDatos ITBA.JPG} % Add your logo or any image
-  \vfill
-  \large \textit{Instituto Tecnológico Buenos Aires}\\
+  \begin{tikzpicture}[remember picture,overlay]
+    \draw[line width=2pt] [xshift=25mm, yshift=-25mm]  (current page.north west) rectangle (current page.south east);
+    \draw[line width=1pt] [xshift=30mm, yshift=-30mm] (current page.north west) rectangle (current page.south east);
+  \end{tikzpicture}
+  \begin{flushright}
+    \includegraphics[width=0.3\textwidth]{C:/Users/Fer/ITBA_TFI/code/latex/img/logo-itba-300x206.jpg} % Add your logo or any image
+  \end{flushright}
+  \begin{flushleft}
+    \large \textit{INSTITUTO TECNOLÓGICO DE BUENOS AIRES – ITBA}\\
+    \vspace{0.5cm}
+    \large \textit{ESCUELA DE INGENIERÍA Y GESTIÓN }\\
     \vspace{1cm}
-  \large \textit{Argentina-2024}
+  \end{flushleft}
+\centering
+{\Huge \textbf{Singularidades en Curvas Poblacionales para el AMBA 1991-2022}\\[1em]
+ \Large Fernando Meseri\\[1em]
+ \today}
+\vfill
+\begin{flushleft}
+    \large \textit{AUTOR: MESERI, Fernando (Leg. Nº 503.801)}\\
+    \vspace{1cm}
+    \large \textit{TUTOR/ES: GOMEZ, Leticia I.}\\
+    \vspace{1cm}
+    \large \textit{TRABAJO FINAL PRESENTADO PARA LA OBTENCIÓN DEL TÍTULO DE ESPECIALISTA EN CIENCIA DE DATOS}
+\end{flushleft}
+\centering
+ \Large BUENOS AIRES\\[1em]
+ \Large PRIMER CUATRIMESTRE, 2024\\[1em]
 \end{titlepage}
+
+
+
 
 
 % Start the content on a new page
