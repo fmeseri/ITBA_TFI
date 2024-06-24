@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.3)  22 JUN 2024 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.3)  24 JUN 2024 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -723,60 +723,76 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
- (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+ (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count347
+\csq@gtype=\count348
+\csq@glevel=\count349
+\csq@qlevel=\count350
+\csq@maxlvl=\count351
+\csq@tshold=\count352
+\csq@ltx@everypar=\toks58
+ (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count347
+\lrq@indent=\count353
  (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count348
-\c@listtotal=\count349
-\c@listcount=\count350
-\c@liststart=\count351
-\c@liststop=\count352
-\c@citecount=\count353
-\c@citetotal=\count354
-\c@multicitecount=\count355
-\c@multicitetotal=\count356
-\c@instcount=\count357
-\c@maxnames=\count358
-\c@minnames=\count359
-\c@maxitems=\count360
-\c@minitems=\count361
-\c@citecounter=\count362
-\c@maxcitecounter=\count363
-\c@savedcitecounter=\count364
-\c@uniquelist=\count365
-\c@uniquename=\count366
-\c@refsection=\count367
-\c@refsegment=\count368
-\c@maxextratitle=\count369
-\c@maxextratitleyear=\count370
-\c@maxextraname=\count371
-\c@maxextradate=\count372
-\c@maxextraalpha=\count373
-\c@abbrvpenalty=\count374
-\c@highnamepenalty=\count375
-\c@lownamepenalty=\count376
-\c@maxparens=\count377
-\c@parenlevel=\count378
-\blx@tempcnta=\count379
-\blx@tempcntb=\count380
-\blx@tempcntc=\count381
-\c@blx@maxsection=\count382
-\blx@maxsegment@0=\count383
-\blx@notetype=\count384
-\blx@parenlevel@text=\count385
-\blx@parenlevel@foot=\count386
-\blx@sectionciteorder@0=\count387
-\blx@sectionciteorderinternal@0=\count388
-\blx@entrysetcounter=\count389
-\blx@biblioinstance=\count390
+\c@tabx@nest=\count354
+\c@listtotal=\count355
+\c@listcount=\count356
+\c@liststart=\count357
+\c@liststop=\count358
+\c@citecount=\count359
+\c@citetotal=\count360
+\c@multicitecount=\count361
+\c@multicitetotal=\count362
+\c@instcount=\count363
+\c@maxnames=\count364
+\c@minnames=\count365
+\c@maxitems=\count366
+\c@minitems=\count367
+\c@citecounter=\count368
+\c@maxcitecounter=\count369
+\c@savedcitecounter=\count370
+\c@uniquelist=\count371
+\c@uniquename=\count372
+\c@refsection=\count373
+\c@refsegment=\count374
+\c@maxextratitle=\count375
+\c@maxextratitleyear=\count376
+\c@maxextraname=\count377
+\c@maxextradate=\count378
+\c@maxextraalpha=\count379
+\c@abbrvpenalty=\count380
+\c@highnamepenalty=\count381
+\c@lownamepenalty=\count382
+\c@maxparens=\count383
+\c@parenlevel=\count384
+\blx@tempcnta=\count385
+\blx@tempcntb=\count386
+\blx@tempcntc=\count387
+\c@blx@maxsection=\count388
+\blx@maxsegment@0=\count389
+\blx@notetype=\count390
+\blx@parenlevel@text=\count391
+\blx@parenlevel@foot=\count392
+\blx@sectionciteorder@0=\count393
+\blx@sectionciteorderinternal@0=\count394
+\blx@entrysetcounter=\count395
+\blx@biblioinstance=\count396
 \labelnumberwidth=\skip132
 \labelalphawidth=\skip133
 \biblabelsep=\skip134
@@ -788,84 +804,86 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@bcfin=\read4
 \blx@bcfout=\write5
 \blx@langwohyphens=\language80
-\c@mincomprange=\count391
-\c@maxcomprange=\count392
-\c@mincompwidth=\count393
+\c@mincomprange=\count397
+\c@maxcomprange=\count398
+\c@mincompwidth=\count399
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count394
-\c@savedafterword=\count395
-\c@annotator=\count396
-\c@savedannotator=\count397
-\c@author=\count398
-\c@savedauthor=\count399
-\c@bookauthor=\count400
-\c@savedbookauthor=\count401
-\c@commentator=\count402
-\c@savedcommentator=\count403
-\c@editor=\count404
-\c@savededitor=\count405
-\c@editora=\count406
-\c@savededitora=\count407
-\c@editorb=\count408
-\c@savededitorb=\count409
-\c@editorc=\count410
-\c@savededitorc=\count411
-\c@foreword=\count412
-\c@savedforeword=\count413
-\c@holder=\count414
-\c@savedholder=\count415
-\c@introduction=\count416
-\c@savedintroduction=\count417
-\c@namea=\count418
-\c@savednamea=\count419
-\c@nameb=\count420
-\c@savednameb=\count421
-\c@namec=\count422
-\c@savednamec=\count423
-\c@translator=\count424
-\c@savedtranslator=\count425
-\c@shortauthor=\count426
-\c@savedshortauthor=\count427
-\c@shorteditor=\count428
-\c@savedshorteditor=\count429
-\c@labelname=\count430
-\c@savedlabelname=\count431
-\c@institution=\count432
-\c@savedinstitution=\count433
-\c@lista=\count434
-\c@savedlista=\count435
-\c@listb=\count436
-\c@savedlistb=\count437
-\c@listc=\count438
-\c@savedlistc=\count439
-\c@listd=\count440
-\c@savedlistd=\count441
-\c@liste=\count442
-\c@savedliste=\count443
-\c@listf=\count444
-\c@savedlistf=\count445
-\c@location=\count446
-\c@savedlocation=\count447
-\c@organization=\count448
-\c@savedorganization=\count449
-\c@origlocation=\count450
-\c@savedoriglocation=\count451
-\c@origpublisher=\count452
-\c@savedorigpublisher=\count453
-\c@publisher=\count454
-\c@savedpublisher=\count455
-\c@language=\count456
-\c@savedlanguage=\count457
-\c@origlanguage=\count458
-\c@savedoriglanguage=\count459
-\c@pageref=\count460
-\c@savedpageref=\count461
+\c@afterword=\count400
+\c@savedafterword=\count401
+\c@annotator=\count402
+\c@savedannotator=\count403
+\c@author=\count404
+\c@savedauthor=\count405
+\c@bookauthor=\count406
+\c@savedbookauthor=\count407
+\c@commentator=\count408
+\c@savedcommentator=\count409
+\c@editor=\count410
+\c@savededitor=\count411
+\c@editora=\count412
+\c@savededitora=\count413
+\c@editorb=\count414
+\c@savededitorb=\count415
+\c@editorc=\count416
+\c@savededitorc=\count417
+\c@foreword=\count418
+\c@savedforeword=\count419
+\c@holder=\count420
+\c@savedholder=\count421
+\c@introduction=\count422
+\c@savedintroduction=\count423
+\c@namea=\count424
+\c@savednamea=\count425
+\c@nameb=\count426
+\c@savednameb=\count427
+\c@namec=\count428
+\c@savednamec=\count429
+\c@translator=\count430
+\c@savedtranslator=\count431
+\c@shortauthor=\count432
+\c@savedshortauthor=\count433
+\c@shorteditor=\count434
+\c@savedshorteditor=\count435
+\c@labelname=\count436
+\c@savedlabelname=\count437
+\c@institution=\count438
+\c@savedinstitution=\count439
+\c@lista=\count440
+\c@savedlista=\count441
+\c@listb=\count442
+\c@savedlistb=\count443
+\c@listc=\count444
+\c@savedlistc=\count445
+\c@listd=\count446
+\c@savedlistd=\count447
+\c@liste=\count448
+\c@savedliste=\count449
+\c@listf=\count450
+\c@savedlistf=\count451
+\c@location=\count452
+\c@savedlocation=\count453
+\c@organization=\count454
+\c@savedorganization=\count455
+\c@origlocation=\count456
+\c@savedoriglocation=\count457
+\c@origpublisher=\count458
+\c@savedorigpublisher=\count459
+\c@publisher=\count460
+\c@savedpublisher=\count461
+\c@language=\count462
+\c@savedlanguage=\count463
+\c@origlanguage=\count464
+\c@savedoriglanguage=\count465
+\c@pageref=\count466
+\c@savedpageref=\count467
 \shorthandwidth=\skip140
 \shortjournalwidth=\skip141
 \shortserieswidth=\skip142
@@ -889,19 +907,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count462
-\c@textcitetotal=\count463
-\c@textcitemaxnames=\count464
-\c@biburlbigbreakpenalty=\count465
-\c@biburlbreakpenalty=\count466
-\c@biburlnumpenalty=\count467
-\c@biburlucpenalty=\count468
-\c@biburllcpenalty=\count469
+\c@textcitecount=\count468
+\c@textcitetotal=\count469
+\c@textcitemaxnames=\count470
+\c@biburlbigbreakpenalty=\count471
+\c@biburlbreakpenalty=\count472
+\c@biburlnumpenalty=\count473
+\c@biburlucpenalty=\count474
+\c@biburllcpenalty=\count475
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count470
+\c@smartand=\count476
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -911,8 +929,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count471
-\c@bbx:relatedtotal=\count472
+\c@bbx:relatedcount=\count477
+\c@bbx:relatedtotal=\count478
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -943,22 +961,6 @@ Package biblatex Info: ... and expl3
 (biblatex)             setting 'casechanger=expl3'.
  (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-)) (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
-Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count473
-\csq@gtype=\count474
-\csq@glevel=\count475
-\csq@qlevel=\count476
-\csq@maxlvl=\count477
-\csq@tshold=\count478
-\csq@ltx@everypar=\toks58
- (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
-File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
-)
-Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
-Package csquotes Info: ... configuration file loaded successfully.
- (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
-File: csquotes.cfg 
 )) (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -973,25 +975,25 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
  (c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
 )
 \openout1 = `TFI_Meseri.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1056,8 +1058,8 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
-LaTeX Info: Redefining \. on input line 89.
-LaTeX Info: Redefining \% on input line 89.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
@@ -1075,275 +1077,256 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'TFI_Meseri.bbl' found.
- (c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                alvarez2001
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
-Package biblatex Info: Reference section=0 on input line 89.
-Package biblatex Info: Reference segment=0 on input line 89.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
- (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
- (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+ (c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.bbl)
+Package biblatex Info: Reference section=0 on input line 100.
+Package biblatex Info: Reference segment=0 on input line 100.
+<C:/Users/Fer/ITBA_TFI/code/latex/img/itba_logo-2000x664.png, id=4, 1505.625pt x 499.8675pt>
+File: C:/Users/Fer/ITBA_TFI/code/latex/img/itba_logo-2000x664.png Graphic file (type png)
+<use C:/Users/Fer/ITBA_TFI/code/latex/img/itba_logo-2000x664.png>
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/itba_logo-2000x664.png  used on input line 110.
+(pdftex.def)             Requested size: 256.07481pt x 85.01448pt.
+<C:/Users/Fer/ITBA_TFI/code/latex/img/EspCsDatos ITBA.JPG, id=6, 389.65575pt x 193.32225pt>
+File: C:/Users/Fer/ITBA_TFI/code/latex/img/EspCsDatos ITBA.JPG Graphic file (type jpg)
+<use C:/Users/Fer/ITBA_TFI/code/latex/img/EspCsDatos ITBA.JPG>
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/EspCsDatos ITBA.JPG  used on input line 111.
+(pdftex.def)             Requested size: 256.07481pt x 127.0562pt.
+ [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
-{C:/Users/Fer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 195--199
+{C:/Users/Fer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <C:/Users/Fer/ITBA_TFI/code/latex/img/itba_logo-2000x664.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/EspCsDatos ITBA.JPG>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 133.
+ (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 133.
+ (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 285--290
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 223--228
+Underfull \hbox (badness 10000) in paragraph at lines 314--320
 
  []
 
-
-LaTeX Warning: Command \~ invalid in math mode on input line 233.
-
-Missing character: There is no ñ in font cmr10!
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 338--361
+Underfull \hbox (badness 10000) in paragraph at lines 436--465
 
  []
 
 [6]
-Overfull \hbox (28.00189pt too wide) in paragraph at lines 371--403
+Overfull \hbox (28.00189pt too wide) in paragraph at lines 473--505
  [][] 
  []
 
 [7] [8]
-<C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png, id=41, 857.8449pt x 426.393pt>
+<C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png, id=47, 857.8449pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png  used on input line 460.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png  used on input line 566.
 (pdftex.def)             Requested size: 409.72125pt x 203.65784pt.
-<C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png, id=43, 856.3995pt x 426.393pt>
+<C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png, id=48, 856.3995pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png  used on input line 467.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png  used on input line 573.
 (pdftex.def)             Requested size: 409.72125pt x 203.99617pt.
-<C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png, id=44, 860.013pt x 426.393pt>
+<C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png, id=49, 860.013pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png  used on input line 473.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png  used on input line 579.
 (pdftex.def)             Requested size: 409.72125pt x 203.13734pt.
-<C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png, id=45, 729.927pt x 432.8973pt>
-File: C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png Graphic file (type png)
-<use C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png  used on input line 579.
-(pdftex.def)             Requested size: 409.72125pt x 242.9955pt.
-<C:/Users/Fer/ITBA_TFI/code/latex/img/Dens199122All.png, id=46, 515.2851pt x 417.7206pt>
-File: C:/Users/Fer/ITBA_TFI/code/latex/img/Dens199122All.png Graphic file (type png)
-<use C:/Users/Fer/ITBA_TFI/code/latex/img/Dens199122All.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/Dens199122All.png  used on input line 591.
-(pdftex.def)             Requested size: 409.72125pt x 332.14365pt.
- [9] [10 <C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png>] [11 <C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png>] [12 <C:/Users/Fer/ITBA_TFI/code/latex/img/Pob19912022All.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/Dens199122All.png>] [13]
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg, id=72, 847.66183pt x 599.4301pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--655
+
+ []
+
+[9] [10 <C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas300k.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas700k.png>] [11 <C:/Users/Fer/ITBA_TFI/code/latex/img/ProyLineas1.300k.png>] [12]
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg, id=70, 847.66183pt x 599.4301pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg  used on input line 610.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg  used on input line 693.
 (pdftex.def)             Requested size: 245.82962pt x 173.83942pt.
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg, id=73, 3520.15125pt x 2489.3pt>
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg, id=71, 3520.15125pt x 2489.3pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg  used on input line 617.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg  used on input line 700.
 (pdftex.def)             Requested size: 245.82962pt x 173.813pt.
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg, id=74, 847.66183pt x 599.4301pt>
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg, id=72, 847.66183pt x 599.4301pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg  used on input line 624.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg  used on input line 707.
 (pdftex.def)             Requested size: 245.82962pt x 173.83942pt.
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg, id=75, 847.66183pt x 599.4301pt>
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg, id=73, 847.66183pt x 599.4301pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg  used on input line 631.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg  used on input line 714.
 (pdftex.def)             Requested size: 245.82962pt x 173.83942pt.
- [14 <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 642--651
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 654--656
-
- []
-
-<C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png, id=79, 465.4188pt x 284.0211pt>
+ [13 <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob1991.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2001.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2010.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaPob2022.jpg>]
+<C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png, id=77, 465.4188pt x 284.0211pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png  used on input line 714.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png  used on input line 796.
 (pdftex.def)             Requested size: 409.72125pt x 250.03468pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--721
+Underfull \hbox (badness 10000) in paragraph at lines 800--803
 
  []
 
-[15
-
-
-]
-<C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png, id=89, 714.0276pt x 426.393pt>
+<C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png, id=78, 714.0276pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png  used on input line 743.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png  used on input line 825.
 (pdftex.def)             Requested size: 409.72125pt x 244.6796pt.
- [16 <C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png>]
+[14
+
+
+] [15 <C:/Users/Fer/ITBA_TFI/code/latex/img/GrowthRatioBoxplot.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png>]
 <C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png, id=94, 713.3049pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png  used on input line 778.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png  used on input line 860.
 (pdftex.def)             Requested size: 409.72125pt x 244.92683pt.
 <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png, id=95, 711.8595pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png  used on input line 786.
-(pdftex.def)             Requested size: 230.46576pt x 138.04257pt.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png  used on input line 868.
+(pdftex.def)             Requested size: 409.72125pt x 245.4213pt.
 <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png, id=96, 711.1368pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png  used on input line 793.
-(pdftex.def)             Requested size: 230.46576pt x 138.1857pt.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png  used on input line 875.
+(pdftex.def)             Requested size: 409.72125pt x 245.66853pt.
 <C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png, id=97, 714.7503pt x 425.6703pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png  used on input line 809.
-(pdftex.def)             Requested size: 230.46576pt x 137.2565pt.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png  used on input line 890.
+(pdftex.def)             Requested size: 409.72125pt x 244.01807pt.
 <C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png, id=98, 714.7503pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png  used on input line 816.
-(pdftex.def)             Requested size: 230.46576pt x 137.48953pt.
- [17 <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasOutliersRatios.png>] [18 <C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png>] [19 <C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png>]
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg, id=115, 3520.15125pt x 2489.3pt>
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png  used on input line 897.
+(pdftex.def)             Requested size: 409.72125pt x 244.43236pt.
+ [16 <C:/Users/Fer/ITBA_TFI/code/latex/img/CVGrowthRatioAll.png>] [17 <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobMedia.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/CurvasCVOutliersPobAlta.png>] [18 <C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobBoxplotxAnio.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/DensPobTendenciaLinea.png>] [19]
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg, id=117, 3520.15125pt x 2489.3pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg  used on input line 834.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg  used on input line 914.
 (pdftex.def)             Requested size: 245.82962pt x 173.813pt.
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg, id=116, 3520.15125pt x 2489.3pt>
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg, id=118, 3520.15125pt x 2489.3pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg  used on input line 841.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg  used on input line 921.
 (pdftex.def)             Requested size: 245.82962pt x 173.813pt.
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg, id=117, 3520.15125pt x 2489.3pt>
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg, id=119, 3520.15125pt x 2489.3pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg  used on input line 848.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg  used on input line 928.
 (pdftex.def)             Requested size: 245.82962pt x 173.813pt.
-<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg, id=118, 3520.15125pt x 2489.3pt>
+<C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg, id=120, 3520.15125pt x 2489.3pt>
 File: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg Graphic file (type jpg)
 <use C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg  used on input line 855.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg  used on input line 935.
 (pdftex.def)             Requested size: 245.82962pt x 173.813pt.
  [20 <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens1991.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2001.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2010.jpg> <C:/Users/Fer/ITBA_TFI/QGIS/img/AmbaDens2022.jpg>]
-<C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png, id=122, 714.7503pt x 426.393pt>
+<C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png, id=124, 714.7503pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png  used on input line 880.
-(pdftex.def)             Requested size: 230.46576pt x 137.48953pt.
-<C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png, id=123, 714.7503pt x 426.393pt>
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png  used on input line 960.
+(pdftex.def)             Requested size: 409.72125pt x 244.43236pt.
+<C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png, id=125, 714.7503pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png  used on input line 887.
-(pdftex.def)             Requested size: 230.46576pt x 137.48953pt.
-<C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png, id=124, 714.7503pt x 426.393pt>
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png  used on input line 967.
+(pdftex.def)             Requested size: 409.72125pt x 244.43236pt.
+<C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png, id=126, 714.7503pt x 426.393pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png  used on input line 913.
-(pdftex.def)             Requested size: 230.46576pt x 137.48953pt.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png  used on input line 991.
+(pdftex.def)             Requested size: 409.72125pt x 244.43236pt.
+<C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png, id=127, 714.7503pt x 426.393pt>
+File: C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png Graphic file (type png)
+<use C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png>
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png  used on input line 998.
+(pdftex.def)             Requested size: 409.72125pt x 244.43236pt.
  [21
 
 
- <C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png>]
-<C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png, id=130, 714.7503pt x 426.393pt>
-File: C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png Graphic file (type png)
-<use C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png  used on input line 920.
-(pdftex.def)             Requested size: 230.46576pt x 137.48953pt.
-<C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png, id=131, 552.1428pt x 492.8814pt>
+ <C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartxanioBoxplot.png>] [22 <C:/Users/Fer/ITBA_TFI/code/latex/img/VivPartTendenciaLinea.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png>]
+<C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png, id=137, 552.1428pt x 492.8814pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png  used on input line 937.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png  used on input line 1015.
 (pdftex.def)             Requested size: 409.72125pt x 365.74934pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--946
-
- []
-
-[22 <C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png> <C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png>] [23 <C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 952--954
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1024
 
  []
 
 
-LaTeX Warning: Citation 'alvarez2001' on page 24 undefined on input line 968.
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 1006--1011
+[23 <C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png>] [24 <C:/Users/Fer/ITBA_TFI/code/latex/img/CorrMatrx.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1088
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1019
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1097
 
  []
 
-<C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png, id=141, 719.8092pt x 566.5968pt>
+<C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png, id=148, 719.8092pt x 566.5968pt>
 File: C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png Graphic file (type png)
 <use C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png  used on input line 1022.
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png  used on input line 1100.
 (pdftex.def)             Requested size: 409.72125pt x 322.5226pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1044--1051
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1130
 
  []
 
-[24] [25 <C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png>]
-Overfull \hbox (46.2799pt too wide) in paragraph at lines 1051--1051
+[25] [26 <C:/Users/Fer/ITBA_TFI/code/latex/img/BoxPlotModels.png>]
+Overfull \hbox (46.2799pt too wide) in paragraph at lines 1165--1165
  [][] 
- []
-
-[26
-
-]
-<C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png, id=154, 734.9859pt x 506.6127pt>
-File: C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png Graphic file (type png)
-<use C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png>
-Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png  used on input line 1083.
-(pdftex.def)             Requested size: 409.72125pt x 282.41794pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1090--1107
-
  []
 
 [27
 
 ]
-<img/DER.jpg, id=158, 883.80188pt x 577.40718pt>
-File: img/DER.jpg Graphic file (type jpg)
-<use img/DER.jpg>
-Package pdftex.def Info: img/DER.jpg  used on input line 1154.
-(pdftex.def)             Requested size: 409.72125pt x 267.681pt.
- [28 <C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1160.
+<C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png, id=159, 734.9859pt x 506.6127pt>
+File: C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png Graphic file (type png)
+<use C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png>
+Package pdftex.def Info: C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png  used on input line 1168.
+(pdftex.def)             Requested size: 409.72125pt x 282.41794pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1194
+
+ []
+
+[28
+
+ <C:/Users/Fer/ITBA_TFI/code/latex/img/LMFinalChart.png>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1203.
  (C:\Users\Fer\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
+) [29]
+<img/DER.jpg, id=170, 883.80188pt x 577.40718pt>
+File: img/DER.jpg Graphic file (type jpg)
+<use img/DER.jpg>
+Package pdftex.def Info: img/DER.jpg  used on input line 1241.
+(pdftex.def)             Requested size: 409.72125pt x 267.681pt.
+ [30 <./img/DER.jpg>]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1162.
- [29 <./img/DER.jpg>] [30] [31] [32] [33] (c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.aux
-LaTeX Info: Redefining \sptext on input line 12.
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1249.
+ [31] [32] [33] [34] (c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.aux
+LaTeX Info: Redefining \sptext on input line 10.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1354,17 +1337,17 @@ Package logreq Info: Writing requests to 'TFI_Meseri.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42135 strings out of 474485
- 991147 string characters out of 5744679
- 2518325 words of memory out of 5000000
- 63769 multiletter control sequences out of 15000+600000
- 583283 words of font info for 105 fonts, out of 8000000 for 9000
+ 42181 strings out of 474485
+ 993176 string characters out of 5744679
+ 2541114 words of memory out of 5000000
+ 63815 multiletter control sequences out of 15000+600000
+ 582953 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,107p,1197b,1856s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.pdf (33 pages, 10837927 bytes).
+ 99i,12n,107p,1650b,1851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Fer\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Fer/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on c:\Users\Fer\ITBA_TFI\code\latex\build\TFI_Meseri.pdf (35 pages, 10709461 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
+ 933 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
