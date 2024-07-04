@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/TFI_Meseri"] 1719090558.93889 "build/TFI_Meseri.bcf" "build/TFI_Meseri.bbl" "build/TFI_Meseri" 1719264058.54782 0
-  "build/TFI_Meseri.bcf" 1719264057 110005 fc9cf1fde03873fedd194896c3c5cc15 "pdflatex"
+["biber build/TFI_Meseri"] 1719090558.93889 "build/TFI_Meseri.bcf" "build/TFI_Meseri.bbl" "build/TFI_Meseri" 1719264229.75036 0
+  "build/TFI_Meseri.bcf" 1719264229 110005 fc9cf1fde03873fedd194896c3c5cc15 "pdflatex"
   "ref.bib" 1719184561 8664 2cc2cab46bf543b07dceb7915385c9fe ""
   (generated)
   "build/TFI_Meseri.bbl"
   "build/TFI_Meseri.blg"
   (rewritten before read)
-["pdflatex"] 1719264051.30476 "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" "build/TFI_Meseri.pdf" "TFI_Meseri" 1719264058.54918 0
+["pdflatex"] 1719264223.41719 "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" "build/TFI_Meseri.pdf" "TFI_Meseri" 1719264229.75141 0
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1719074520 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0800.pk" 1709601708 19872 8f5774b5f8c36f1b5b8b963b0601c29f ""
   "C:/Users/Fer/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1000.pk" 1709572328 25420 5088be6e4e45c08f86d73f2f4eda084d ""
@@ -323,11 +323,11 @@
   "C:/Users/Fer/ITBA_TFI/code/latex/img/indMascTendenciaLinea.png" 1711234089 39427 f6d19fece641bd9dd4d07a4ea1190d5d ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/indMascxAnioBoxplot.png" 1711234539 36329 7399a5a312f43b1ef227500c9c91e5e8 ""
   "C:/Users/Fer/ITBA_TFI/code/latex/img/logo-itba-300x206.jpg" 1624042037 10994 f16dabf585da9620875e36397527e99f ""
-  "TFI_Meseri.tex" 1719264050 87825 27b6c5f49135f009aa9fa3db72939f2b ""
-  "build/TFI_Meseri.aux" 1719264057 16819 604f3d9fa5612b8734558eda96e53fa2 "pdflatex"
+  "TFI_Meseri.tex" 1719264218 87827 a6282a51ec961051716260a78d15b97c ""
+  "build/TFI_Meseri.aux" 1719264229 16819 604f3d9fa5612b8734558eda96e53fa2 "pdflatex"
   "build/TFI_Meseri.bbl" 1719090562 23196 d83f077af90d87b9f08268863110cc06 "biber build/TFI_Meseri"
-  "build/TFI_Meseri.run.xml" 1719264057 2340 1a7cb7127eefeb5817502aac413d8463 "pdflatex"
-  "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" 1719264050 87825 27b6c5f49135f009aa9fa3db72939f2b ""
+  "build/TFI_Meseri.run.xml" 1719264229 2340 1a7cb7127eefeb5817502aac413d8463 "pdflatex"
+  "c:/Users/Fer/ITBA_TFI/code/latex/TFI_Meseri.tex" 1719264218 87827 a6282a51ec961051716260a78d15b97c ""
   "img/DER.jpg" 1709560245 85216 10092a94ddcfcbc6674396a1bbad6a8c ""
   (generated)
   "build/TFI_Meseri.aux"
