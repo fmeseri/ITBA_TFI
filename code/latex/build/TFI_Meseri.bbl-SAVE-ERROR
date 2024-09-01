@@ -1,0 +1,434 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{CELADEAlvarez}{book}{}
+      \name{author}{4}{}{%
+        {{hash=56d0ca4bf9632170f9de74d7af094a21}{%
+           family={Álvarez},
+           familyi={Á\bibinitperiod},
+           given={Gustavo.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8d2948f26d0883bac35b9d2e6c05713a}{%
+           family={Latin\bibnamedelima America},
+           familyi={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={United\bibnamedelimb Nations.\bibnamedelimi Economic\bibnamedelima Commission},
+           giveni={U\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim C\bibinitperiod},
+           prefix={for},
+           prefixi={f\bibinitperiod}}}%
+        {{hash=e19c29cd4494a0c072e64308642b7feb}{%
+           family={Caribbean.},
+           familyi={C\bibinitperiod},
+           prefix={the},
+           prefixi={t\bibinitperiod}}}%
+        {{hash=0de872e3258ba103963971f93821343a}{%
+           family={Población.},
+           familyi={P\bibinitperiod},
+           given={CELADE\bibnamedelimb (Organization).\bibnamedelimi División},
+           giveni={C\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim D\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Naciones Unidas, CEPAL/ECLAC}%
+      }
+      \strng{namehash}{de99a690c95e7a8bd02846aa42e71563}
+      \strng{fullhash}{3081cba94716abf83e3c72e58a5ef528}
+      \strng{bibnamehash}{de99a690c95e7a8bd02846aa42e71563}
+      \strng{authorbibnamehash}{de99a690c95e7a8bd02846aa42e71563}
+      \strng{authornamehash}{de99a690c95e7a8bd02846aa42e71563}
+      \strng{authorfullhash}{3081cba94716abf83e3c72e58a5ef528}
+      \field{sortinit}{Á}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{"Enero de 2001." "LC/L.1444-p"--Title page verso. Los métodos de estimación indirecta de indicadores sociodemográficos para áreas geográficas menores han tenido un importante desarrollo en América Latina y el Caribe en los últimos años. Algunos de estos métodos tienen referentes en trabajos de hacia varias décadas atrás y durante la década de 1990 confluyeron tres principales factores para que se produjera un significativo impulso a esta línea de investigación: a) el fuerte aumento de la demanda por este tipo de información, originado en requerimientos legales vinculados a la representación política, ciertas asignaciones presupuestarias en el marco de procesos de descentralización, o de la focalización de las políticas sociales en general; b) una mayor frecuencia, periodicidad y sistematización del levantamiento de encuestas de hogares y demográficas con representación nacional, urbana y rural; y c) la más amplia disponibilidad de medios computacionales de bajo costo y alta velocidad de procesamiento de grandes bases de datos, como lo son las encuestas y, sobre todo, los censos de población y vivienda.En este marco, resulta fundamental conocer el tamaño de la población para todas las unidades geográficas del país. Dentro de este panorama, este trabajo utiliza los registros administrativos existentes (variables sintomáticas) junto con modelos estadísticos que permitan actualizar las estimaciones de población de áreas menores en períodos intercensales.}
+      \field{isbn}{9213217749}
+      \field{title}{Estimación de población en áreas menores mediante variables sintomáticas : una aplicación para los departamentos de la República Argentina (1991 y 1996)}
+      \field{year}{2001}
+      \field{pages}{36}
+      \range{pages}{1}
+    \endentry
+    \entry{redatam2001}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9f24d2b98f377fe60d12992cbafe8087}{%
+           family={UN-CEPAL},
+           familyi={U\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f24d2b98f377fe60d12992cbafe8087}
+      \strng{fullhash}{9f24d2b98f377fe60d12992cbafe8087}
+      \strng{bibnamehash}{9f24d2b98f377fe60d12992cbafe8087}
+      \strng{authorbibnamehash}{9f24d2b98f377fe60d12992cbafe8087}
+      \strng{authornamehash}{9f24d2b98f377fe60d12992cbafe8087}
+      \strng{authorfullhash}{9f24d2b98f377fe60d12992cbafe8087}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CENSO 2001} Procesamiento del Censo Nacional de Población, Hogares y Viviendas 2001}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2001ARG
+      \endverb
+      \verb{url}
+      \verb https://redatam.indec.gob.ar/argbin/RpWebEngine.exe/PortalAction?BASE=CPV2001ARG
+      \endverb
+    \endentry
+    \entry{redatam2010}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3d5ef42e119915ce1ec50e4cac6d87f9}{%
+           family={CEPAL},
+           familyi={C\bibinitperiod},
+           given={UN-},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d5ef42e119915ce1ec50e4cac6d87f9}
+      \strng{fullhash}{3d5ef42e119915ce1ec50e4cac6d87f9}
+      \strng{bibnamehash}{3d5ef42e119915ce1ec50e4cac6d87f9}
+      \strng{authorbibnamehash}{3d5ef42e119915ce1ec50e4cac6d87f9}
+      \strng{authornamehash}{3d5ef42e119915ce1ec50e4cac6d87f9}
+      \strng{authorfullhash}{3d5ef42e119915ce1ec50e4cac6d87f9}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CENSO 2010} Procesamiento del Censo Nacional de Población, Hogares y Viviendas 2010 - Cuestionario Ampliado}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://redatam.indec.gob.ar/binarg/RpWebEngine.exe/Portal?BASE=CPV2010A&lang=ESP
+      \endverb
+      \verb{url}
+      \verb https://redatam.indec.gob.ar/binarg/RpWebEngine.exe/Portal?BASE=CPV2010A&lang=ESP
+      \endverb
+    \endentry
+    \entry{Chawda2018}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=87ee0ec53b3b3b40e86c83eebba239b9}{%
+           family={Chawda},
+           familyi={C\bibinitperiod},
+           given={Manan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2b13fc27d24f7f26b3c6a5ee44bd130b}{%
+           family={Rane},
+           familyi={R\bibinitperiod},
+           given={Rutuja},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6ef1cdbe9639cda916158a851d767077}{%
+           family={Giri},
+           familyi={G\bibinitperiod},
+           given={Skrinanth},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{37f0131a79ee7e3a67ffa71fe341ee42}
+      \strng{fullhash}{37f0131a79ee7e3a67ffa71fe341ee42}
+      \strng{bibnamehash}{37f0131a79ee7e3a67ffa71fe341ee42}
+      \strng{authorbibnamehash}{37f0131a79ee7e3a67ffa71fe341ee42}
+      \strng{authornamehash}{37f0131a79ee7e3a67ffa71fe341ee42}
+      \strng{authorfullhash}{37f0131a79ee7e3a67ffa71fe341ee42}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-5386-1974-2}
+      \field{journaltitle}{2nd International Conference on Inventive Communication and Computational Technologies (ICICCT)}
+      \field{title}{Demographic Progress Analysis of Census Data Using Data Mining}
+      \field{year}{2018}
+      \field{pages}{1894\bibrangedash 1897}
+      \range{pages}{4}
+    \endentry
+    \entry{ReporteMatriculaEDU}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2557856211e084e87ea4b5732d07c700}{%
+           family={Educación},
+           familyi={E\bibinitperiod},
+           given={Ministerio},
+           giveni={M\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{2557856211e084e87ea4b5732d07c700}
+      \strng{fullhash}{2557856211e084e87ea4b5732d07c700}
+      \strng{bibnamehash}{2557856211e084e87ea4b5732d07c700}
+      \strng{authorbibnamehash}{2557856211e084e87ea4b5732d07c700}
+      \strng{authornamehash}{2557856211e084e87ea4b5732d07c700}
+      \strng{authorfullhash}{2557856211e084e87ea4b5732d07c700}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Relevamiento Anual, 2011 a 2018, DIEE, MECCyTN.}
+      \field{title}{https://data.educacion.gob.ar/reporte-matricula.php}
+      \field{year}{2022}
+    \endentry
+    \entry{Gupta2012}{article}{}
+      \name{author}{3}{}{%
+        {{hash=663644f57791814640666a8d3564d6cd}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Arindam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f4bfe5bef8e1e5efc6fd661365e51e53}{%
+           family={Bhattacharya},
+           familyi={B\bibinitperiod},
+           given={Sabyasachi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0166260d98fd98e9155fe187b09aab41}{%
+           family={Chattyopadhyay},
+           familyi={C\bibinitperiod},
+           given={Asis\bibnamedelima Kumar},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c86ab32977916448fef5a895b768e9a}
+      \strng{fullhash}{3c86ab32977916448fef5a895b768e9a}
+      \strng{bibnamehash}{3c86ab32977916448fef5a895b768e9a}
+      \strng{authorbibnamehash}{3c86ab32977916448fef5a895b768e9a}
+      \strng{authornamehash}{3c86ab32977916448fef5a895b768e9a}
+      \strng{authorfullhash}{3c86ab32977916448fef5a895b768e9a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Logistic model has long history regarding it's usefulness in population predictions. But the model has some limitations when applying for the sparse census data sets, typically available for developing countries. In such situation the relative growth rates (RGR) exhibit some unusual trend (increasing, primary increasing and then decreasing) which is different from the common decreasing trend of logistic law. To tackle those complicated demographic situations we have successfully explored a simplified version of Tsoularis and Wallace model (TWM) which can explain all of these feasible monotonic structures of RGR. In addition to this we have also proposed another model (PM) by assuming RGR as a direct function of time covariate but not the size. The model has some key advantages than the simplified TWM (STWM). It can detect the demographic phase change point at which the developing country switches over towards developed one. We performed RGR modelling (as a function of time) but not the size as neither TWM nor STWM is analytically solvable and the underlying population model is better identifiable in the former case but not in the later. The less number of parameters involve in both the STWM and PM ensure a better chance of convergence under non-linear least square estimation than the original TWM with more parameters.}
+      \field{title}{Exploring New Models for Population Prediction in Detecting Demographic Phase Change for Sparse Census Data}
+      \field{year}{2012}
+      \keyw{Tsoularis-Wallace model,and phrases: Population prediction,demographic phase change AMS Subject Classification: 62P25 1,relative growth rate}
+    \endentry
+    \entry{Hoque2012}{article}{}
+      \name{author}{1}{}{%
+        {{hash=710950f5e27dc31178961014ef6834cb}{%
+           family={Hoque},
+           familyi={H\bibinitperiod},
+           given={Nazrul},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{710950f5e27dc31178961014ef6834cb}
+      \strng{fullhash}{710950f5e27dc31178961014ef6834cb}
+      \strng{bibnamehash}{710950f5e27dc31178961014ef6834cb}
+      \strng{authorbibnamehash}{710950f5e27dc31178961014ef6834cb}
+      \strng{authornamehash}{710950f5e27dc31178961014ef6834cb}
+      \strng{authorfullhash}{710950f5e27dc31178961014ef6834cb}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper evaluates small area population estimates produced by the Housing Unit Method, Ratio-correlation Method, Component Method II, and the average of all three methods compared to the 2000 Census counts for the 254 counties and 1,279 places in Texas. This evaluation of three estimation methods shows the expected patterns of error by population size and population change. Of the three methods tested, no single method produced more accurate estimates than the average of two or three methods. The assessment of the accuracy of the place-level estimates show substantially higher levels of errors than those found for counties. Résumé Cet article évalue les estimations de populations vivant dans de petites régions produites par unité d'habitation, rapport de corrélation et méthode des composantes II ainsi que la moyenne des trois méthodes comparativement aux recensements de 2000 pour les 254 comtés et les 1 279 endroits au Texas. Cette évaluation des trois méthodes d'estimation démontre le modèle prévu d'erreurs par taille et changement de population. Des trois méthodes ayant fait l'objet de l'essai, aucune n'a produit des estimations plus précises que la moyenne de deux ou trois méthodes. L'évaluation de l'exactitude des estimations de lieu indique des taux d'erreurs significativement plus élevés que celles des comtés. Mots-clés: estimations de populations vivant dans de petites régions, unité d'habitation, rapport de corrélation, méthode des composantes.}
+      \field{journaltitle}{Canadian Studies in Population 39, No. 1–2}
+      \field{title}{Evaluation of small area population estimates produced by Housing Unit, Ratio-correlation, and Component Method II compared to 2000 Census counts}
+      \field{year}{2012}
+      \field{pages}{91\bibrangedash 108}
+      \range{pages}{18}
+      \keyw{component method,housing unit method,ratio-correlation method,small area population estimates}
+    \endentry
+    \entry{IGMSig}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8fdc0c09478ad726492ae82522404212}{%
+           family={IGM},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{8fdc0c09478ad726492ae82522404212}
+      \strng{fullhash}{8fdc0c09478ad726492ae82522404212}
+      \strng{bibnamehash}{8fdc0c09478ad726492ae82522404212}
+      \strng{authorbibnamehash}{8fdc0c09478ad726492ae82522404212}
+      \strng{authornamehash}{8fdc0c09478ad726492ae82522404212}
+      \strng{authorfullhash}{8fdc0c09478ad726492ae82522404212}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Dataset GEO} IGM--Insititu Geográfico Nacional, Argentina Capas SIG - Departamento}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG
+      \endverb
+      \verb{url}
+      \verb https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG
+      \endverb
+    \endentry
+    \entry{Censo2001}{online}{}
+      \name{author}{1}{}{%
+        {{hash=733000f2fafacade84a35ad9f81edd37}{%
+           family={INDEC},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{fullhash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{bibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorbibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authornamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorfullhash}{733000f2fafacade84a35ad9f81edd37}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CENSO 2001} Censo Nacional de Población, Hogares y Viviendas del año 2001}
+      \field{urlday}{30}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.indec.gob.ar/micro_sitios/webcenso/index.asp
+      \endverb
+      \verb{url}
+      \verb https://www.indec.gob.ar/micro_sitios/webcenso/index.asp
+      \endverb
+    \endentry
+    \entry{Censo2022Datos}{online}{}
+      \name{author}{1}{}{%
+        {{hash=733000f2fafacade84a35ad9f81edd37}{%
+           family={INDEC},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{fullhash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{bibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorbibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authornamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorfullhash}{733000f2fafacade84a35ad9f81edd37}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CENSO 2022} Resultados Previsionales}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.censo.gob.ar/index.php/datos_provisionales
+      \endverb
+      \verb{url}
+      \verb https://www.censo.gob.ar/index.php/datos_provisionales
+      \endverb
+    \endentry
+    \entry{INDECProgDemo}{online}{}
+      \name{author}{1}{}{%
+        {{hash=733000f2fafacade84a35ad9f81edd37}{%
+           family={INDEC},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{fullhash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{bibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorbibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authornamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorfullhash}{733000f2fafacade84a35ad9f81edd37}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{DEMOGRAFICO} Programa de Análisis Demográfico de la Dirección de Estadísticas Poblacionales}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.indec.gob.ar/indec/web/Institucional-Indec-IndicadoresDemograficos
+      \endverb
+      \verb{url}
+      \verb https://www.indec.gob.ar/indec/web/Institucional-Indec-IndicadoresDemograficos
+      \endverb
+    \endentry
+    \entry{INDECProyecciones1025}{book}{}
+      \name{author}{1}{}{%
+        {{hash=733000f2fafacade84a35ad9f81edd37}{%
+           family={INDEC},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{fullhash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{bibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorbibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authornamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorfullhash}{733000f2fafacade84a35ad9f81edd37}
+      \field{extraname}{4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1 ed.}
+      \field{title}{Estimaciones de población por sexo, departamento y año calendario 2010-2025.}
+      \field{year}{2015}
+    \endentry
+    \entry{INDEC1Serie38}{book}{}
+      \name{author}{1}{}{%
+        {{hash=733000f2fafacade84a35ad9f81edd37}{%
+           family={INDEC},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{fullhash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{bibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorbibnamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authornamehash}{733000f2fafacade84a35ad9f81edd37}
+      \strng{authorfullhash}{733000f2fafacade84a35ad9f81edd37}
+      \field{extraname}{5}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-950-896-433-5}
+      \field{journaltitle}{N°38 Serie análisis demográfico}
+      \field{title}{Proyecciones provinciales de población por sexo y grupo de edad 2010-2014. - Instituto Nacional de Estadística y Censos - INDEC, 2013. E-Book.}
+      \field{volume}{1a ed.}
+      \field{year}{2013}
+    \endentry
+    \entry{kimball1996data}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6ec3b140429bc59ad63c593b172f665c}{%
+           family={Kimball},
+           familyi={K\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ec3b140429bc59ad63c593b172f665c}
+      \strng{fullhash}{6ec3b140429bc59ad63c593b172f665c}
+      \strng{bibnamehash}{6ec3b140429bc59ad63c593b172f665c}
+      \strng{authorbibnamehash}{6ec3b140429bc59ad63c593b172f665c}
+      \strng{authornamehash}{6ec3b140429bc59ad63c593b172f665c}
+      \strng{authorfullhash}{6ec3b140429bc59ad63c593b172f665c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Data Warehouse Toolkit: Practical Techniques For Building Dimensional Data Warehouses-Bom}
+      \field{year}{1996}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
